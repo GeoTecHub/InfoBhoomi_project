@@ -1,0 +1,45 @@
+/* Make the map container take the full viewport height */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Style the buttons and controls */
+.map-container button,
+.map-container label,
+.map-container select {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 5px;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Space out buttons horizontally */
+.map-container button + button {
+  margin-left: 5px;
+}
+
+/* Ensure the select box is styled consistently */
+.map-container select {
+  margin-left: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Adjust label position */
+.map-container label {
+  top: 50px;
+  left: 10px;
+}
+
+/* Position the select box below the label */
+.map-container select {
+  top: 70px;
+  left: 10px;
+}
