@@ -1,14 +1,27 @@
 <div id="map" class="map-container" #mapElement>
-    <button (click)="setDrawingType('Point')">Draw Point</button>
-    <button (click)="setDrawingType('LineString')">Draw Line</button>
-    <button (click)="setDrawingType('Polygon')">Draw Polygon</button>
-    <label for="view-projection">Map Projection</label>
+  
+  <div class="toolbar">
     <select id="view-projection" (change)="onProjectionChange($event)">
+      <option value="" disabled selected hidden class="map-projection-selctor-title">Map Projection</option>
       <option value="EPSG:27700">Web Mercator (EPSG:27700)</option>
       <option value="EPSG:23032">Web Mercator (EPSG:23032)</option>
       <option value="EPSG:4326">WGS 84 (EPSG:4326)</option>
       <option value="EPSG:5235">SLD99 (EPSG:5235)</option>
       <!-- Add other projections as needed -->
     </select>
+
+    <div class="draw-options">
+      <button (click)="setDrawingType('Point')"><img src="/point.png" alt="Draw Point"></button>
+      <button (click)="setDrawingType('LineString')"><img src="/line.png" alt="Draw Line"></button>
+      <button (click)="setDrawingType('Polygon')"><img src="/polygon.png" alt="Draw Polygon"></button>
+    </div>
+    
   </div>
+
+    <!-- <label for="view-projection" >Map Projection</label> -->
+
+
+
   
+
+</div>

@@ -5,41 +5,68 @@
   height: 100vh;
 }
 
-/* Style the buttons and controls */
-.map-container button,
-.map-container label,
-.map-container select {
+/* Style the toolbar container */
+.toolbar {
   position: absolute;
+  align-items:flex-end;
   top: 10px;
-  left: 10px;
-  margin: 5px;
+  right: 10px;
   z-index: 1000;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  background: none;
+}
+
+/* Style the buttons and controls */
+.draw-options button,
+.toolbar select {
+  margin: 5px 0;
   padding: 5px 10px;
+  background-color: white;
+  border: 1px solid #88a9b2;
   cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(136, 169, 178, 0.5);
+  
 }
 
-/* Space out buttons horizontally */
-.map-container button + button {
-  margin-left: 5px;
+/* Hover effect for buttonsr and selecto */
+.toolbar button:hover,.toolbar select:hover {
+  opacity: 0.5;
+
 }
 
-/* Ensure the select box is styled consistently */
-.map-container select {
-  margin-left: 5px;
-  padding: 5px;
-  border: 1px solid #ccc;
+/* Style the draw options container */
+.draw-options {
+  display: flex;
+  justify-content:left;
+  flex-direction: column;
+  
+
 }
 
-/* Adjust label position */
-.map-container label {
-  top: 50px;
-  left: 10px;
+.draw-options button {
+  margin-right: 5px;/* Space out buttons horizontally */
+  width: 35px;
 }
 
-/* Position the select box below the label */
-.map-container select {
-  top: 70px;
-  left: 10px;
+
+#view-projection {
+  margin-top: 5px;
+  appearance: none; /* Remove default styling */
+  padding: 5px; 
+  text-align: center; 
+  width: 120px
+}
+
+
+
+/* Optionally adjust padding or margin for better spacing */
+.draw-options button img {
+  width: 15px; 
+  height: 15px; 
 }
