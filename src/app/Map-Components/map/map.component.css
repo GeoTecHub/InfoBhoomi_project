@@ -1,0 +1,248 @@
+/* Make the map container take the full viewport height */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Style the toolbar container */
+.toolbar {
+  position: absolute;
+  align-items: flex-end;
+  top: 100px;
+  right: 10px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  background: none;
+  gap: 10px;
+}
+
+/* Style the buttons and controls */
+
+.toolbar select {
+  margin: 5px 0;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid #88a9b2;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(136, 169, 178, 0.5);
+}
+
+
+/* Style the draw options container */
+.draw-options {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.draw-options button {
+  margin-right: 0; /* Space out buttons horizontally */
+  background: none;
+}
+.button-img {
+  width: 40px; /* adjust the width as needed */
+  height: 40px; /* adjust the height as needed */
+}
+#view-projection {
+  margin-top: 5px;
+  appearance: none; /* Remove default styling */
+  padding: 5px;
+  text-align: center;
+  width: 120px;
+}
+
+/* Style the ribbon container */
+.ribbon-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Adjust the height based on your SVG */
+  background-color: none;
+  z-index: 1000;
+  background-image: url("/RIBBON.svg");
+  background-size: cover;
+}
+.first-raw {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  /* border: 1px solid ; */
+}
+
+.second-raw {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  left: 0;
+  height: 40px;
+  /* border: 1px solid ; */
+}
+
+.ribbon-container-right-corner-buttons {
+  position: absolute;
+  align-items: flex-end;
+  top: 0px;
+  right: 10px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: raw;
+  font-size: 12px;
+  background: none;
+  gap: 10px;
+}
+
+.ribbon-container-right-corner-buttons button img {
+  width: 27px; /* adjust the width as needed */
+  height: 27px; /* adjust the height as needed */
+}
+
+.ribbon-container-left-corner-buttons {
+  position: absolute;
+  align-items: flex-end;
+  top: 4px;
+  left: 320px;
+  z-index: 1000;
+  background-color: none;
+  border: none;
+  display: flex;
+  flex-direction: raw;
+  background: none;
+  gap: 15px;
+  /* border: 1px solid ; */
+}
+
+.ribbon-container-left-corner-buttons button img {
+  width: 90px; /* adjust the width as needed */
+  height: 35px; /* adjust the height as needed */
+}
+
+.label-container {
+  background-color: none;
+  padding: 0;
+  width: 205px;
+  border: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  flex-direction: row;
+  }
+
+.column1 {
+  width: 80px;
+  text-align: right;
+  height: auto; /* Allow height to adjust based on content */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+  
+}
+.column2 {
+  width: 125px;
+  height: auto; /* Allow height to adjust based on content */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-align:left;
+
+}
+.row label {
+  font-weight: bold;
+  border: none;
+  padding: 0px;
+  font-size: 10px;
+}
+.top-right-corner-box button {
+  background: none;
+  border: none;
+}
+
+.top-right-corner-box {
+  display: flex;
+  position: absolute;
+  flex-direction: raw;
+  gap: 15px;
+  right: 20px;
+  top: 6px;
+  /* border: 1px solid ; */
+}
+
+.top-right-corner-box button img {
+  width: 26px;
+  height: 27px;
+}
+
+.search-bar {
+  position: absolute;
+  top: 2px;
+  left: 315px;
+  width: 100%;
+  max-width: 350px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align items */
+  border-radius: 5px; /* Added units */
+  background-color: #005f86;
+  padding: 2px 5px 2px 18px; /* Added padding */
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer; /* Added cursor pointer */
+  padding: 0 5px; /* Added padding */
+  display: flex; /* Added to center align the icon inside button */
+  align-items: center; /* Center align icon vertically */
+}
+
+/* Hover effect for buttonsr and select */
+.search-bar button:hover,
+.top-right-corner-box button:hover,
+.ribbon-container-left-corner-buttons button:hover,
+.ribbon-container-right-corner-buttons button:hover,
+.toolbar button:hover,
+.toolbar select:hover {
+  opacity: 0.5;
+}
+
+.search-bar button img {
+  width: 20px; /* Adjust icon size */
+  height: 20px; /* Adjust icon size */
+}
+
+.search-bar input {
+  width: 200px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  flex-grow: 1; /* Make input take the remaining space */
+  padding: 0; /* Added padding */
+  text-align: center; /* Center align text */
+}
+
+
+@media (max-width: 992px) {
+   .top-right-corner-box, .ribbon-container-right-corner-buttons {
+    display: none; /* Hide both containers */
+  }
+}
