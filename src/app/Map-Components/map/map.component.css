@@ -34,11 +34,6 @@
   background-color: rgb(136, 169, 178, 0.5);
 }
 
-/* Hover effect for buttonsr and selecto */
-.toolbar button:hover,
-.toolbar select:hover {
-  opacity: 0.5;
-}
 
 /* Style the draw options container */
 .draw-options {
@@ -141,7 +136,7 @@
 .label-container {
   background-color: none;
   padding: 0;
-  width: 230px;
+  width: 205px;
   border: none;
 }
 
@@ -150,16 +145,26 @@
   justify-content: space-between;
   padding: 0;
   flex-direction: row;
-}
+  }
 
 .column1 {
   width: 80px;
-  text-align: center;
+  text-align: right;
+  height: auto; /* Allow height to adjust based on content */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+  
 }
 .column2 {
-  width: 150px;
-}
+  width: 125px;
+  height: auto; /* Allow height to adjust based on content */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+  text-align:left;
 
+}
 .row label {
   font-weight: bold;
   border: none;
@@ -209,10 +214,14 @@
   display: flex; /* Added to center align the icon inside button */
   align-items: center; /* Center align icon vertically */
 }
+
+/* Hover effect for buttonsr and select */
 .search-bar button:hover,
 .top-right-corner-box button:hover,
 .ribbon-container-left-corner-buttons button:hover,
-.ribbon-container-right-corner-buttons button:hover {
+.ribbon-container-right-corner-buttons button:hover,
+.toolbar button:hover,
+.toolbar select:hover {
   opacity: 0.5;
 }
 
@@ -229,4 +238,11 @@
   flex-grow: 1; /* Make input take the remaining space */
   padding: 0; /* Added padding */
   text-align: center; /* Center align text */
+}
+
+
+@media (max-width: 992px) {
+   .top-right-corner-box, .ribbon-container-right-corner-buttons {
+    display: none; /* Hide both containers */
+  }
 }
