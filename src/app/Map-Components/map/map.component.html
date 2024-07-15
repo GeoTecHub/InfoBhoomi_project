@@ -1,7 +1,57 @@
+
 <div id="map" class="map-container" #mapElement>
+
+  <div class="ribbon-container">
+    
+    <div class="first-raw">
+      <div class="ribbon-container-left-corner-buttons">
+        <button><img src="/LAYERS BUTTON.svg" alt="Layers" ></button>
+        <button><img src="/HISTORY BUTTON.svg" alt="History" ></button>
+        <button><img src="/VEHICLE TRACKING BUTTON.svg" alt="Vehicle Tracking" ></button>
+        <div action="" class="search-bar">
+          <input type="text" placeholder="Search">
+          <button type="submit"><img src="search icon.svg" alt="Search"></button>
+        </div>
+      </div>
+
+      <div class="top-right-corner-box">
+        <button><img src="/NOTIFICATIONS.svg" alt="Layers" /></button>
+        <button><img src="/FORMAT CHANGE ICON.svg" alt="History" /></button>
   
+        <div class="label-container">
+          <div class="row">
+            <label class="column1">Organization:</label>
+            <label class="column2">Label-oraganization</label>
+          </div>
+          <div class="row">
+            <label class="column1">Admin Name:</label>
+            <label class="column2">Label-admin-name</label>
+          </div>
+        </div>
+        
+        <button><img src="/SETTINGS ICON.svg" alt="Vehicle Tracking" /></button>
+      </div>
+  
+
+    </div>
+
+    <div class="second-raw">
+      <div class="ribbon-container-right-corner-buttons">
+        <button><img src="/EXPORT ICON.svg" alt="Export" ></button>
+        <button><img src="/CLOSE ICON.svg" alt="Close" ></button>
+        <button><img src="/LOAD DATA ICON.svg" alt="Load Data" ></button>
+        <button><img src="/DOWNLOAD ICON.svg" alt="Download" ></button>
+        <button><img src="/PRINT ICON.svg" alt="Print" ></button>
+      </div>
+
+    </div>
+    
+    
+    
+  </div>
+
   <div class="toolbar">
-    <select id="view-projection" (change)="onProjectionChange($event)">
+    <select id="view-projection" (change)="onProjectionChange($event)" aria-label="Select Map Projection">
       <option value="" disabled selected hidden class="map-projection-selctor-title">Map Projection</option>
       <option value="EPSG:27700">Web Mercator (EPSG:27700)</option>
       <option value="EPSG:23032">Web Mercator (EPSG:23032)</option>
@@ -11,17 +61,27 @@
     </select>
 
     <div class="draw-options">
-      <button (click)="setDrawingType('Point')"><img src="/point.png" alt="Draw Point"></button>
-      <button (click)="setDrawingType('LineString')"><img src="/line.png" alt="Draw Line"></button>
-      <button (click)="setDrawingType('Polygon')"><img src="/polygon.png" alt="Draw Polygon"></button>
+      <button (click)="setDrawingType('Point')"><img src="/INSERT POINT BUTTON.png" alt="Draw Point" class="button-img"></button>
+      <button (click)="setDrawingType('LineString')"><img src="/INSERT LINE BUTTON.png" alt="Draw Line" class="button-img"></button>
+      <button (click)="setDrawingType('Polygon')"><img src="/INSERT POLYGON BUTTON.png" alt="Draw Polygon" class="button-img"></button>
+      <button><img src="/ADD BUFFER BUTTON.png" alt="Add Buffer" class="button-img"></button>
+      <button><img src="/ADD TAG BUTTON.png" alt="Add Tag" class="button-img"></button>
+      <button><img src="/EDIT BUTTON.png" alt="Edit" class="button-img"></button>
+      <button><img src="/SPLIT BUTTON.png" alt="Split" class="button-img"></button>
+      <button><img src="/MERGE BUTTON.png" alt="Merge" class="button-img"></button>
+      <button><img src="/DELETE BUTTON.png" alt="Delete" class="button-img"></button>
+      <button><img src="/SNAP ON BUTTON.png" alt="Snap" class="button-img"></button>
+      <button><img src="/SELECT BUTTON.png" alt="Select" class="button-img"></button>
+      <button><img src="/PAN BUTTON.png" alt="Pan" class="button-img"></button>
+      <button><img src="/MEASURE BUTTON.png" alt="Measure" class="button-img"></button>
+      <button><img src="/ZOOM IN BUTTON.png" alt="Zoom In" class="button-img"></button>
+      <button><img src="/ZOOM OUT BUTTON.png" alt="Zoom Out" class="button-img"></button>
     </div>
-    
+   
+   
   </div>
-
-    <!-- <label for="view-projection" >Map Projection</label> -->
-
-
-
   
 
+    <!-- <label for="view-projection" >Map Projection</label> -->
+ 
 </div>
