@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import 'ol/ol.css'; // ****
 import Map from 'ol/Map';
 import View from 'ol/View';
 import TileLayer from 'ol/layer/Tile';
@@ -10,12 +11,14 @@ import Feature from 'ol/Feature';
 import { Geometry, LineString, Polygon } from 'ol/geom';
 import { click } from 'ol/events/condition';
 import proj4 from 'proj4';
-import { get as getProjection, transform } from 'ol/proj.js';
+import { fromLonLat, get as getProjection, transform } from 'ol/proj.js';
 import MousePosition from 'ol/control/MousePosition.js';
 import { createStringXY } from 'ol/coordinate.js';
 import { register } from 'ol/proj/proj4';
 import { CutPolygonService } from './cut-polygon.service';
 import { Fill, Circle, Stroke, Style } from 'ol/style.js';
+import { defaults as defaultControls } from 'ol/control';
+import Zoom from 'ol/control/Zoom';
 
 @Injectable({
   providedIn: 'root',
@@ -31,7 +34,7 @@ export class OpenLayerService {
   private snapInteraction: Snap | null = null;
   private splitPloy: Polygon | null = null;
   private splitLine: LineString | null = null;
- 
+
   constructor() {
     this.registerProjections();
   }
@@ -83,7 +86,6 @@ export class OpenLayerService {
   initializeMap(mapElement: HTMLElement): void {
     this.map = new Map({
       target: mapElement,
-
       layers: [
         new TileLayer({
           source: new OSM(),
@@ -92,8 +94,8 @@ export class OpenLayerService {
 
       view: new View({
         projection: 'EPSG:3857',
-        center: [0, 0],
-        zoom: 2,
+        center: fromLonLat([81, 8]), // ****
+        zoom: 8,
       }),
     });
   }
@@ -256,6 +258,7 @@ export class OpenLayerService {
       const mousePositionControl = new MousePosition({
         coordinateFormat: createStringXY(4),
         projection: proj,
+        className: 'mouse-position-data',
       });
       this.map.addControl(mousePositionControl);
     } else {

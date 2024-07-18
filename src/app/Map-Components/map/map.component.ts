@@ -30,34 +30,31 @@ export class MapComponent implements OnInit, AfterViewInit {
     this.openLayerService.initializeMap(this.mapElementRef.nativeElement);
     this.openLayerService.createMousePositionControl();
     this.openLayerService.addselectionInteraction();
-  };
+  }
   setDrawingType(type: 'Point' | 'LineString' | 'Polygon'): void {
     // if (this.parentSelectedLayer!) { // where does this comes from??
-      this.openLayerService.addDrawingInteraction(
-        type,
-        (drawnFeature: Feature<Geometry>) => {
-          // Here, you handle the drawnFeature. For example:
-          console.log('A feature was drawn:', drawnFeature);
+    this.openLayerService.addDrawingInteraction(
+      type,
+      (drawnFeature: Feature<Geometry>) => {
+        // Here, you handle the drawnFeature. For example:
+        console.log('A feature was drawn:', drawnFeature);
 
-          const vectorSource = new VectorSource({
-            features: [drawnFeature],
-          });
+        const vectorSource = new VectorSource({
+          features: [drawnFeature],
+        });
 
-          const vectorLayer = new VectorLayer({
-            source: vectorSource,
-          });
+        const vectorLayer = new VectorLayer({
+          source: vectorSource,
+        });
 
-          this.openLayerService.addLayer(vectorLayer) // this where the feature is adding to the selected layer
-        }
-      );
-    
+        this.openLayerService.addLayer(vectorLayer); // this where the feature is adding to the selected layer
+      }
+    );
   }
-
 
   onProjectionChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
     const projectionId = selectElement.value;
     this.openLayerService.viewProjectionChange(projectionId);
   }
-
 }

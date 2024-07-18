@@ -3,6 +3,16 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  /* padding-top: 80px; */
+}
+
+.mouse-position-data {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-size: 12px;
+  color: #333;
+  border: 1px solid #ccc;
 }
 
 /* Style the toolbar container */
@@ -33,7 +43,6 @@
   border-radius: 10px;
   background-color: rgb(136, 169, 178, 0.5);
 }
-
 
 /* Style the draw options container */
 .draw-options {
@@ -145,7 +154,7 @@
   justify-content: space-between;
   padding: 0;
   flex-direction: row;
-  }
+}
 
 .column1 {
   width: 80px;
@@ -154,7 +163,6 @@
   overflow: hidden; /* Hide overflow content */
   text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
   white-space: nowrap; /* Prevent text wrapping */
-  
 }
 .column2 {
   width: 125px;
@@ -162,8 +170,7 @@
   overflow: hidden; /* Hide overflow content */
   text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
   white-space: nowrap; /* Prevent text wrapping */
-  text-align:left;
-
+  text-align: left;
 }
 .row label {
   font-weight: bold;
@@ -240,9 +247,9 @@
   text-align: center; /* Center align text */
 }
 
-
 @media (max-width: 992px) {
-   .top-right-corner-box, .ribbon-container-right-corner-buttons {
+  .top-right-corner-box,
+  .ribbon-container-right-corner-buttons {
     display: none; /* Hide both containers */
   }
 }
