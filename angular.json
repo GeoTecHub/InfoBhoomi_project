@@ -28,7 +28,8 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/Map-Components/popup-windows/tag-panel-popup/custom-theme.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",

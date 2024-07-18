@@ -1,1 +1,63 @@
-<p>tag-panel-popup works!</p>
+<!-- popup.component.html -->
+<h2 mat-dialog-title class="tag-panel-popup-title">Add Tag Panel</h2>
+
+<mat-dialog-content class="mat-popup-content">
+  <form class="tag-panel-input-container-1">
+    <mat-form-field class="data-input-text">
+      <mat-label>Tag ID</mat-label>
+      <input class="custom-input" matInput maxlength="10" placeholder="Ex. AB12345...">
+    </mat-form-field>
+
+    <mat-form-field class="data-input-text">
+      <mat-label >Property Infohoomi ID</mat-label>
+      <input matInput #message placeholder="Ex. 4567...">
+    </mat-form-field>
+
+    <mat-form-field class="data-input-text">
+      <mat-label>Assessment No/ Shop ID</mat-label>
+      <input matInput #message placeholder="Ex. SS0987...">
+    </mat-form-field>
+
+  </form>
+  <form class="tag-panel-input-container-2">
+    <mat-form-field class="data-input-text-2">
+      <mat-label>Road</mat-label>
+      <input matInput #message placeholder="Ex. Road Name...">
+    </mat-form-field>
+
+    <mat-form-field class="data-input-text-2">
+      <mat-label>Ward/ Complex</mat-label>
+      <input matInput #message placeholder="Ex. Ward Name...">
+    </mat-form-field>
+  </form>
+  <div class="tag-panel-popup-dropdown">
+    <mat-form-field>
+      <mat-label>Tag Type</mat-label>
+      <mat-select>
+        <mat-option value="option1">Option 1</mat-option>
+        <mat-option value="option2">Option 2</mat-option>
+        <mat-option value="option3">Option 3</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="tag-panel-popup-text">
+    <mat-form-field >
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput maxlength="250" #comment placeholder="Ex. It makes me feel..."></textarea>
+      <mat-hint align="end">{{comment.value.length}} / 250</mat-hint>
+      <mat-hint align="start"><strong>(Don't exceed the word limit)</strong></mat-hint>
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+
+<div class="tag-panel-popup-bottom">
+  <mat-dialog-actions class="tag-panel-popup-button" align="start" >
+    <button  mat-button mat-dialog-close><strong>Add</strong></button>
+  </mat-dialog-actions>
+
+  <mat-slide-toggle class="tag-panel-popup-slider" align="end" labelPosition="after">
+    <strong>Active</strong>
+  </mat-slide-toggle>
+</div>
+

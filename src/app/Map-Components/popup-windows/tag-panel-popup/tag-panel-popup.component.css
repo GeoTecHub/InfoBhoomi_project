@@ -1,0 +1,70 @@
+.tag-panel-popup-title {
+  background-color: rgb(0, 94, 94);
+  color: white;
+  text-align: center;
+  height: 60px;
+}
+
+.mat-popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-panel-input-container-1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag-panel-input-container-2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.data-input-text {
+  width: auto;
+  padding-left: 5px;
+}
+
+.data-input-text-2 {
+  margin-top: 5px;
+  width: 325px;
+  padding-left: 5px;
+}
+
+.data-input-text mat-label,
+.data-input-text-2 mat-label {
+  font-size: 14px;
+}
+
+.custom-input {
+  font-size: 12px;
+}
+
+.tag-panel-popup-dropdown mat-form-field {
+  width: 100%;
+}
+
+.tag-panel-popup-text mat-form-field {
+  width: 100%;
+}
+
+.tag-panel-popup-bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.tag-panel-popup-button button {
+  background-color: rgb(214, 214, 214);
+  color: rgb(26, 26, 26);
+  width: 150px;
+}
+
+.tag-panel-popup-slider {
+  width: 60%;
+  padding-top: 20px;
+}
+
+.mdc-switch:enabled .mdc-switch__track::after {
+  background-color: aqua;
+}
