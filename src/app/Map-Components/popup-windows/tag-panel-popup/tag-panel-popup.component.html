@@ -1,5 +1,14 @@
 <!-- popup.component.html -->
-<h2 mat-dialog-title class="tag-panel-popup-title">Add Tag Panel</h2>
+ <div class="tag-panel-popup-title">
+  <h2 mat-dialog-title >
+    Add Tag Panel  
+    <mat-icon aria-hidden="false" fontIcon="local_offer"></mat-icon>
+  </h2>
+  <button mat-icon-button mat-dialog-close class="close-button">
+    <mat-icon>close</mat-icon>
+  </button>
+ </div>
+
 
 <mat-dialog-content class="mat-popup-content">
   <form class="tag-panel-input-container-1">
@@ -53,11 +62,11 @@
 
 <div class="tag-panel-popup-bottom">
   <mat-dialog-actions class="tag-panel-popup-button" align="start" >
-    <button  mat-button mat-dialog-close><strong>Add</strong></button>
+    <button  mat-button mat-dialog-close><strong>Add</strong><mat-icon fontIcon="add_circle"></mat-icon></button>
   </mat-dialog-actions>
 
   <mat-slide-toggle class="tag-panel-popup-slider" align="end" labelPosition="after">
-    <strong>Active</strong>
+    <strong>Active</strong> 
   </mat-slide-toggle>
 </div>
 

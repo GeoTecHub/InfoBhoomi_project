@@ -1,4 +1,4 @@
-.tag-panel-popup-title {
+.reminder-panel-popup-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -6,7 +6,7 @@
   /* text-align: center; */
 }
 
-.tag-panel-popup-title h2 {
+.reminder-panel-popup-title h2 {
   color: rgb(255, 255, 255);
   height: 60px;
 }
@@ -22,12 +22,12 @@
   flex-direction: column;
 }
 
-.tag-panel-input-container-1 {
+.Rreminder-panel-input-container-1 {
   display: flex;
   flex-direction: row;
 }
 
-.tag-panel-input-container-2 {
+.reminder-panel-input-container-2 {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -36,6 +36,7 @@
 .data-input-text {
   width: auto;
   padding-left: 5px;
+  font-size: 14px;
   height: 70px;
 }
 
@@ -44,6 +45,7 @@
   width: 325px;
   padding-left: 5px;
   height: 70px;
+  font-size: 14px;
 }
 
 .data-input-text mat-label,
@@ -54,30 +56,50 @@
 .custom-input {
   font-size: 12px;
 }
+/* ************************************************** */
+.reminder-panel-popup-datepicker {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 70px;
+  font-size: 14px;
+}
 
-.tag-panel-popup-dropdown mat-form-field {
+.reminder-panel-popup-datepicker mat-form-field {
+  width: 40%;
+}
+
+.reminder-panel-popup-picktime {
+  margin-left: 50px;
+  height: 50px;
+}
+
+/* ************************************************** */
+.reminder-panel-popup-dropdown mat-form-field {
   width: 100%;
   font-size: 14px;
   height: 70px;
 }
 
-.tag-panel-popup-text mat-form-field {
+.reminder-panel-popup-text mat-form-field {
   width: 100%;
   font-size: 14px;
+  height: 70px;
 }
 
-.tag-panel-popup-bottom {
+.reminder-panel-popup-bottom {
   display: flex;
   flex-direction: row;
 }
 
-.tag-panel-popup-button button {
+.reminder-panel-popup-button button {
   background-color: rgb(214, 214, 214);
   color: rgb(26, 26, 26);
   width: 150px;
 }
 
-.tag-panel-popup-slider {
+.reminder-panel-popup-slider {
   width: 60%;
   padding-top: 20px;
 }

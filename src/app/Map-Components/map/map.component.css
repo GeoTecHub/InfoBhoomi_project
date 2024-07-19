@@ -263,3 +263,32 @@
   border-radius: 5px;
   height: 30px;
 }
+
+.reminder-popup-button {
+  position: absolute;
+  top: 85px;
+  left: 155px;
+  margin-left: 5px;
+  z-index: 2;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.reminder-view-popup-button {
+  position: absolute;
+  top: 85px;
+  left: 350px;
+  margin-left: 5px;
+  z-index: 2;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.add-inquiry-popup-button {
+  position: absolute;
+  top: 120px;
+  margin-left: 5px;
+  z-index: 2;
+  border-radius: 5px;
+  height: 30px;
+}

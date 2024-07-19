@@ -1,18 +1,22 @@
-import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { provideNativeDateAdapter } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-tag-panel-popup',
+  selector: 'app-reminder-v-panel-popup',
   standalone: true,
+  providers: [provideNativeDateAdapter()],
   imports: [
     MatDialogModule,
     MatButtonModule,
@@ -21,10 +25,11 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatSelectModule,
     MatSlideToggleModule,
+    MatDatepickerModule,
     MatIconModule,
+    NgxMaterialTimepickerModule,
   ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './tag-panel-popup.component.html',
-  styleUrl: './tag-panel-popup.component.css',
+  templateUrl: './reminder-v-panel-popup.component.html',
+  styleUrl: './reminder-v-panel-popup.component.css',
 })
-export class TagPanelPopupComponent {}
+export class ReminderVPanelPopupComponent {}

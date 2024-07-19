@@ -1,47 +1,48 @@
 <div class="reminder-panel-popup-title">
   <h2 mat-dialog-title >
-    Reminder Panel 
-    <mat-icon aria-hidden="false" fontIcon="add_alert"></mat-icon>
+    Created Reminders 
+    <mat-icon aria-hidden="false" fontIcon="notifications"></mat-icon>
   </h2>
-
   <button mat-icon-button mat-dialog-close class="close-button">
     <mat-icon>close</mat-icon>
   </button>
 </div>
 
+
+
 <mat-dialog-content class="mat-popup-content">
   <form class="reminder-panel-input-container-1">
     <mat-form-field class="data-input-text">
       <mat-label>Reminder ID</mat-label>
-      <input class="custom-input" matInput maxlength="10" placeholder="Ex. AB12345...">
+      <input class="custom-input" matInput maxlength="10" value="AB12345" >
     </mat-form-field>
 
     <mat-form-field class="data-input-text">
       <mat-label >Property Infohoomi ID</mat-label>
-      <input matInput #message placeholder="Ex. 4567...">
+      <input matInput #message value="56789">
     </mat-form-field>
 
     <mat-form-field class="data-input-text">
       <mat-label>Assessment No/ Shop ID</mat-label>
-      <input matInput #message placeholder="Ex. SS0987...">
+      <input matInput #message value="TH678">
     </mat-form-field>
   </form>
 
   <form class="reminder-panel-input-container-2">
     <mat-form-field class="data-input-text-2">
       <mat-label>Road</mat-label>
-      <input matInput #message placeholder="Ex. Road Name...">
+      <input matInput #message value="Road Name">
     </mat-form-field>
 
     <mat-form-field class="data-input-text-2">
       <mat-label>Ward/ Complex</mat-label>
-      <input matInput #message placeholder="Ex. Ward Name...">
+      <input matInput #message value="Ward Name">
     </mat-form-field>
   </form>
 
 <div class="reminder-panel-popup-datepicker">
     <mat-form-field >
-        <mat-label>Reminder date <mat-icon aria-hidden="false" fontIcon="calendar_month"></mat-icon></mat-label>
+        <mat-label>Reminder date</mat-label>
         <input matInput [matDatepicker]="picker">
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle  matIconSuffix [for]="picker">
@@ -51,7 +52,7 @@
       </mat-form-field>
 
       <div class="reminder-panel-popup-picktime">
-        <ngx-timepicker-field [controlOnly]="true"></ngx-timepicker-field>
+        <ngx-timepicker-field [controlOnly]="true" [defaultTime]="'11:11 am'"></ngx-timepicker-field>
         <mat-hint>Reminder time</mat-hint>
       </div>
         
@@ -61,7 +62,7 @@
   <div class="reminder-panel-popup-dropdown">
     <mat-form-field>
       <mat-label>Reminder Type</mat-label>
-      <mat-select>
+      <mat-select value="option2">
         <mat-option value="option1">Option 1</mat-option>
         <mat-option value="option2">Option 2</mat-option>
         <mat-option value="option3">Option 3</mat-option>
@@ -72,7 +73,7 @@
   <div class="reminder-panel-popup-text">
     <mat-form-field >
       <mat-label>Leave a comment</mat-label>
-      <textarea matInput maxlength="250" #comment placeholder="Ex. It makes me feel..."></textarea>
+      <textarea matInput maxlength="250" #comment value="This is an example text"></textarea>
       <mat-hint align="end">{{comment.value.length}} / 250</mat-hint>
       <mat-hint align="start"><strong>(Don't exceed the word limit)</strong></mat-hint>
     </mat-form-field>
@@ -81,7 +82,7 @@
 
 <div class="reminder-panel-popup-bottom">
   <mat-dialog-actions class="reminder-panel-popup-button" align="start" >
-    <button  mat-button mat-dialog-close><strong>Add</strong><mat-icon aria-hidden="false" fontIcon="add_circle"></mat-icon></button>
+    <button  mat-button mat-dialog-close><strong>Close</strong></button>
   </mat-dialog-actions>
 
   <mat-slide-toggle class="reminder-panel-popup-slider" align="end" labelPosition="after">

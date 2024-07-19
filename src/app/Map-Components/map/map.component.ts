@@ -18,6 +18,9 @@ import { OpenLayerService } from '../../openLayerServices/open-layer.service';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { TagPanelPopupComponent } from '../popup-windows/tag-panel-popup/tag-panel-popup.component';
+import { ReminderPanelPopupComponent } from '../popup-windows/reminder-panel-popup/reminder-panel-popup.component';
+import { ReminderVPanelPopupComponent } from '../popup-windows/reminder-v-panel-popup/reminder-v-panel-popup.component';
+import { AddInquiryPanelPopupComponent } from '../popup-windows/add-inquiry-panel-popup/add-inquiry-panel-popup.component';
 
 @Component({
   selector: 'app-map',
@@ -33,6 +36,7 @@ export class MapComponent implements OnInit, AfterViewInit {
     private openLayerService: OpenLayerService,
     public dialog: MatDialog
   ) {}
+
   // !--------------------------------
   opentagPanelPopup() {
     const dialogRef = this.dialog.open(TagPanelPopupComponent, {
@@ -45,6 +49,40 @@ export class MapComponent implements OnInit, AfterViewInit {
     });
   }
   // !--------------------------------
+  openReminderPanelPopup() {
+    const dialogRef = this.dialog.open(ReminderPanelPopupComponent, {
+      minWidth: '600px',
+      maxWidth: '800px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  // !-------------------------------
+  openReminderViewPanelPopup() {
+    const dialogRef = this.dialog.open(ReminderVPanelPopupComponent, {
+      minWidth: '600px',
+      maxWidth: '800px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  // !-------------------------------
+  addInqueryPanelPopup() {
+    const dialogRef = this.dialog.open(ReminderVPanelPopupComponent, {
+      minWidth: '600px',
+      maxWidth: '800px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  // !-------------------------------
+
   ngOnInit(): void {}
   ngAfterViewInit(): void {
     this.openLayerService.initializeMap(this.mapElementRef.nativeElement);
