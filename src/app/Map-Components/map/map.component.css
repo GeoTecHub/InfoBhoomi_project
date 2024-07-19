@@ -289,6 +289,12 @@
   top: 120px;
   margin-left: 5px;
   z-index: 2;
+}
+
+.add-inquiry-popup-button button {
+  background-color: #333;
+  color: aliceblue;
   border-radius: 5px;
   height: 30px;
+  font-weight: lighter;
 }

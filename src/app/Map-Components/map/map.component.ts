@@ -17,6 +17,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { OpenLayerService } from '../../openLayerServices/open-layer.service';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 import { FormsModule } from '@angular/forms'; // Import FormsModule
+
 import { TagPanelPopupComponent } from '../popup-windows/tag-panel-popup/tag-panel-popup.component';
 import { ReminderPanelPopupComponent } from '../popup-windows/reminder-panel-popup/reminder-panel-popup.component';
 import { ReminderVPanelPopupComponent } from '../popup-windows/reminder-v-panel-popup/reminder-v-panel-popup.component';
@@ -72,7 +73,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
   // !-------------------------------
   addInqueryPanelPopup() {
-    const dialogRef = this.dialog.open(ReminderVPanelPopupComponent, {
+    const dialogRef = this.dialog.open(AddInquiryPanelPopupComponent, {
       minWidth: '600px',
       maxWidth: '800px',
     });

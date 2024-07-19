@@ -1,8 +1,11 @@
 <div id="map" class="map-container" #mapElement>
-  <button mat-button mat-flat-button class="tag-popup-button" (click)="opentagPanelPopup()">Open Tag Panel</button>
-  <button mat-button mat-flat-button class="reminder-popup-button" (click)="openReminderPanelPopup()">Open Reminder Panel</button>
-  <button mat-button mat-flat-button class="reminder-view-popup-button" (click)="openReminderViewPanelPopup()">Open Reminder View Panel</button>
-  <button mat-button mat-flat-button class="add-inquiry-popup-button" (click)="openReminderViewPanelPopup()">Open Reminder View Panel</button>
+  <button mat-flat-button class="tag-popup-button" (click)="opentagPanelPopup()">Open Tag Panel</button>
+  <button mat-raised-button class="reminder-popup-button" (click)="openReminderPanelPopup()">Open Reminder Panel</button>
+  <button mat-raised-button class="reminder-view-popup-button" (click)="openReminderViewPanelPopup()">Open Reminder View Panel</button>
+  <div class="add-inquiry-popup-button">
+    <button mat-button (click)="addInqueryPanelPopup()"><strong>Add</strong></button>
+  </div>
+  
 
   <div class="ribbon-container">
     
