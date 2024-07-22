@@ -1,0 +1,78 @@
+<!-- popup.component.html -->
+<div class="inquiry-panel-popup-title">
+    <h2 mat-dialog-title >
+      Inquiry Panel  
+      <mat-icon aria-hidden="false" fontIcon="mode_comment"></mat-icon>
+    </h2>
+    <button mat-icon-button mat-dialog-close class="close-button">
+      <mat-icon>close</mat-icon>
+    </button>
+   </div>
+
+  <mat-dialog-content class="mat-popup-content">
+    <form class="inquiry-panel-input-container-1">
+      <mat-form-field class="data-input-text">
+        <mat-label>Inquiry ID</mat-label>
+        <input class="custom-input" matInput maxlength="10"  value="Q223432">
+      </mat-form-field>
+  
+      <mat-form-field class="data-input-text">
+        <mat-label >Property Infohoomi ID</mat-label>
+        <input matInput #message value="76543">
+      </mat-form-field>
+  
+      <mat-form-field class="data-input-text">
+        <mat-label>Assessment No/ Shop ID</mat-label>
+        <input matInput #message value="EE556">
+      </mat-form-field>
+  
+    </form>
+    <form class="inquiry-panel-input-container-2">
+      <mat-form-field class="data-input-text-2">
+        <mat-label>Road</mat-label>
+        <input matInput #message value="Road Name">
+      </mat-form-field>
+  
+      <mat-form-field class="data-input-text-2">
+        <mat-label>Ward/ Complex</mat-label>
+        <input matInput #message value="Ward Name">
+      </mat-form-field>
+    </form>
+    <div class="inquiry-panel-popup-dropdown">
+      <mat-form-field>
+        <mat-label>Inquiry Type</mat-label>
+        <mat-select value="option3">
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  
+    <div class="inquiry-panel-popup-text">
+      <mat-form-field >
+        <mat-label>Comment</mat-label>
+        <textarea matInput maxlength="250" #comment value="Remarks here"></textarea>
+        <mat-hint align="end">{{comment.value.length}} / 250</mat-hint>
+        <mat-hint align="start"><strong>(Don't exceed the word limit)</strong></mat-hint>
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  
+  <div class="inquiry-panel-popup-bottom">
+    <mat-form-field class="inquiry-panel-popup-assign-dropdown">
+      <mat-label>Assigned to</mat-label>
+      <mat-select multiple>
+        <mat-option value="option1">Agent 1</mat-option>
+        <mat-option value="option2">Agent 2</mat-option>
+        <mat-option value="option3">Agent 3</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-slide-toggle class="inquiry-panel-popup-slider" align="end" labelPosition="after">
+      <strong>Active</strong> 
+    </mat-slide-toggle>
+  </div>
+  
+
+  

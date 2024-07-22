@@ -1,0 +1,90 @@
+.inquiry-panel-popup-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(0, 94, 94);
+  /* text-align: center; */
+}
+
+.inquiry-panel-popup-title h2 {
+  color: rgb(255, 255, 255);
+  height: 60px;
+}
+
+.close-button {
+  margin-right: 10px;
+  margin-top: 15px;
+  color: white;
+}
+
+.mat-popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.inquiry-panel-input-container-1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.inquiry-panel-input-container-2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.data-input-text {
+  width: auto;
+  padding-left: 5px;
+  height: 70px;
+}
+
+.data-input-text-2 {
+  margin-top: 5px;
+  width: 325px;
+  padding-left: 5px;
+  height: 70px;
+}
+
+.data-input-text mat-label,
+.data-input-text-2 mat-label {
+  font-size: 14px;
+}
+
+.custom-input {
+  font-size: 12px;
+}
+
+.inquiry-panel-popup-dropdown mat-form-field {
+  width: 100%;
+  font-size: 14px;
+  height: 70px;
+}
+
+.inquiry-panel-popup-text mat-form-field {
+  width: 100%;
+  font-size: 14px;
+}
+
+.inquiry-panel-popup-bottom {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+}
+
+.inquiry-panel-popup-assign-dropdown {
+  position: relative;
+  top: 15px;
+  left: 200px;
+  height: 65px;
+  font-size: 12px;
+}
+
+.inquiry-panel-popup-slider {
+  width: 60%;
+  padding-top: 20px;
+}
+
+.mdc-switch:enabled .mdc-switch__track::after {
+  background-color: aqua;
+}

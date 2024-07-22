@@ -18,10 +18,12 @@ import { OpenLayerService } from '../../openLayerServices/open-layer.service';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 
-import { TagPanelPopupComponent } from '../popup-windows/tag-panel-popup/tag-panel-popup.component';
-import { ReminderPanelPopupComponent } from '../popup-windows/reminder-panel-popup/reminder-panel-popup.component';
-import { ReminderVPanelPopupComponent } from '../popup-windows/reminder-v-panel-popup/reminder-v-panel-popup.component';
-import { AddInquiryPanelPopupComponent } from '../popup-windows/add-inquiry-panel-popup/add-inquiry-panel-popup.component';
+import { ViewInquiryPanelPopupComponent } from '../../common/panels/view-inquiry-panel/view-inquiry-panel-popup.component';
+import { AddInquiryPanelPopupComponent } from '../../common/panels/add-inquiry-panel/add-inquiry-panel-popup.component';
+import { ReminderPanelPopupComponent } from '../../common/panels/add-reminder-panel/reminder-panel-popup.component';
+import { ReminderVPanelPopupComponent } from '../../common/panels/view-reminder-panel/reminder-v-panel-popup.component';
+import { TagPanelPopupComponent } from '../../common/panels/add-tag-panel/tag-panel-popup.component';
+import { NotificationPanelComponent } from '../../common/panels/notification-panel/notification-panel.component';
 
 @Component({
   selector: 'app-map',
@@ -80,6 +82,28 @@ export class MapComponent implements OnInit, AfterViewInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
+    });
+  }
+  // !-------------------------------
+  ViewInqueryPanelPopup() {
+    const dialogRef = this.dialog.open(ViewInquiryPanelPopupComponent, {
+      minWidth: '600px',
+      maxWidth: '800px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  // !-------------------------------
+  OpenNotificationPanel() {
+    const dialogRef = this.dialog.open(NotificationPanelComponent, {
+      width: '250px',
+      position: { top: '50px', right: '50px' },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
     });
   }
   // !-------------------------------

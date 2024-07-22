@@ -254,7 +254,7 @@
   }
 }
 
-/* ***************** tag-panel-popup *************** */
+/* ***************** new pannels & forms *************** */
 .tag-popup-button {
   position: absolute;
   top: 85px;
@@ -292,9 +292,10 @@
 }
 
 .add-inquiry-popup-button button {
-  background-color: #333;
+  background-color: #eb3700;
   color: aliceblue;
   border-radius: 5px;
   height: 30px;
   font-weight: lighter;
+  margin-right: 5px;
 }

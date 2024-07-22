@@ -69,6 +69,8 @@
 .inquiry-panel-popup-bottom {
   display: flex;
   flex-direction: row;
+  /* background-color: aquamarine; */
+  height: 80px;
 }
 
 .inquiry-panel-popup-button button {
@@ -77,10 +79,12 @@
   width: 150px;
 }
 
-.inquiry-panel-popup-assign-dropdown mat-form-field {
-  height: 70px;
-  background-color: blue;
-  margin-bottom: 0;
+.inquiry-panel-popup-assign-dropdown {
+  position: relative;
+  top: 15px;
+  height: 65px;
+  font-size: 12px;
+  /* background-color: rgb(14, 83, 83); */
 }
 
 .inquiry-panel-popup-slider {

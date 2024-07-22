@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+
+// Define your primary, accent, and warn color palettes
+$primary-palette: mat-palette($mat-indigo);
+$accent-palette: mat-palette($mat-pink, A200, A100, A400);
+$warn-palette: mat-palette($mat-red);
+
+// Create the theme object
+$custom-theme: mat-light-theme(
+  (
+    color: (
+      primary: $primary-palette,
+      accent: $accent-palette,
+      warn: $warn-palette,
+    ),
+    typography: mat-typography-config(),
+    density: 0
+  )
+);
+
+// Include the theme styles
+@include angular-material-theme($custom-theme);
+
+// Optionally include other styles for Angular Material components
+@import '~@angular/material/button';
+@include mat-button-theme($custom-theme);
+
+@import '~@angular/material/card';
+@include mat-card-theme($custom-theme);

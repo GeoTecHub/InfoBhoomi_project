@@ -3,10 +3,10 @@
   <button mat-raised-button class="reminder-popup-button" (click)="openReminderPanelPopup()">Open Reminder Panel</button>
   <button mat-raised-button class="reminder-view-popup-button" (click)="openReminderViewPanelPopup()">Open Reminder View Panel</button>
   <div class="add-inquiry-popup-button">
-    <button mat-button (click)="addInqueryPanelPopup()"><strong>Add</strong></button>
+    <button mat-button (click)="addInqueryPanelPopup()"><strong>Add inquiry</strong></button>
+    <button mat-button (click)="ViewInqueryPanelPopup()"><strong>View inquiry</strong></button>
   </div>
   
-
   <div class="ribbon-container">
     
     <div class="first-raw">
@@ -21,7 +21,13 @@
       </div>
 
       <div class="top-right-corner-box">
-        <button><img src="/NOTIFICATIONS.svg" alt="Layers" /></button>
+
+        <!-- * notification button -->
+        <button (click)="OpenNotificationPanel()" class="notification-button">
+          <img src="/NOTIFICATIONS.svg" alt="Layers" />
+        </button>
+        <!-- * -->
+
         <button><img src="/FORMAT CHANGE ICON.svg" alt="History" /></button>
         <div class="label-container">
           <div class="row">
