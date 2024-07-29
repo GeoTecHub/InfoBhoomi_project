@@ -1,0 +1,57 @@
+.notification-panel-head {
+  position: sticky; /* Make the header sticky */
+  top: 0;
+  z-index: 2;
+}
+
+.notification-panel-header {
+  font-size: 26px;
+  background-color: rgb(2, 112, 116);
+  color: white;
+  padding: 10px;
+}
+
+.notifications-clear-button {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: flex-end; /* Align items to the right end */
+  align-items: center;
+}
+
+.notifications-clear-button button {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  color: gray;
+  font-size: 12px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.notifications-clear-button button:hover {
+  color: black;
+}
+
+.notification-list-body {
+  max-height: 500px;
+}
+
+.notification-title {
+  font-size: 14px;
+}
+
+.notification-time-stamp {
+  font-size: 10px;
+  color: gray;
+}
+
+.notification-expansion-body-section-1 {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  color: rgb(0, 84, 133);
+}
+
+.notification-expansion-body-section-2 {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+}

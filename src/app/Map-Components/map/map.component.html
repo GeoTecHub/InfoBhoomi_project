@@ -39,7 +39,50 @@
             <label class="column2">Label-admin-name</label>
           </div>
         </div>
-        <button><img src="/SETTINGS ICON.svg" alt="Vehicle Tracking" /></button>
+
+        <!-- * settings button -->
+        <button class="settings-button" [matMenuTriggerFor]="appMenu">
+          <img src="/SETTINGS ICON.svg" alt="Vehicle Tracking" />
+        </button>
+
+        <mat-menu #appMenu="matMenu" class="settings-menu-container">
+          <button mat-menu-item class="settings-menu-item" (click)="OpenActivityLog()">
+            <mat-icon >
+              history
+            </mat-icon>
+            Active Log
+          </button>
+
+          <button mat-menu-item class="settings-menu-item" (click)="OpenContactAdmin()">
+            <mat-icon >
+              contact_support
+            </mat-icon>
+            Contact Admin
+          </button>
+
+          <button mat-menu-item class="settings-menu-item" (click)="OpenProfile()">
+            <mat-icon >
+              person
+            </mat-icon>
+            Profile
+          </button>
+
+          <button mat-menu-item class="settings-menu-item">
+            <mat-icon >
+              description
+            </mat-icon>
+            Report Generation
+          </button>
+
+          <button mat-menu-item class="settings-menu-item" style="color: red;">
+            <mat-icon style="color: red;">
+              logout
+            </mat-icon>
+            Logout
+          </button>
+        </mat-menu>
+        <!-- * -->
+
       </div>
     </div>
 

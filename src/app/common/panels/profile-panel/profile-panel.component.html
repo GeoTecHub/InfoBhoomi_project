@@ -1,0 +1,40 @@
+<div class="user-profile-panel-popup-title">
+  <mat-toolbar class="user-profile-panel-title-bar">
+      <span class="user-profile-panel-title">User Profile</span>
+      <span class="flex-spacer"></span>
+      <button mat-icon-button mat-dialog-close class="close-button">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+</div>
+
+<div class="profile-image-block">
+  <div class="profile-image-container">
+    <img src="imgs/user_pic.png" alt="Profile Image" class="profile-image">
+    <button mat-icon-button class="change-image-button" (click)="editProfilePic()">
+      <mat-icon>photo_camera</mat-icon>
+    </button>
+    <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;">
+</div>
+
+  <form class="contact-admin-panel-form">
+    <label><b>First Name:</b> {{ firstName }}</label>
+    <label><b>Full Name:</b> {{fullName}}</label>
+    <label><b>NIC:</b> {{nic}}</label>
+    <label><b>Age:</b> {{age}}</label>
+    <label><b>Sex:</b> {{sex}}</label>
+    <label><b>Email:</b> {{email}}</label>
+    <label><b>Organization:</b> {{organization}}</label>
+    <label><b>Sector:</b> {{sector}}</label>
+    <label><b>Position:</b> {{position}}</label>
+  </form>
+</div>
+
+<div class="contact-admin-panel-bottom">
+  <mat-dialog-actions class="inquiry-panel-popup-button" align="end" >
+      <button  mat-button mat-dialog-close style="background-color: rgb(0, 101, 184); color: white;">
+        Edit Profile
+        <mat-icon fontIcon="edit_note"></mat-icon>
+      </button>
+  </mat-dialog-actions>
+</div>

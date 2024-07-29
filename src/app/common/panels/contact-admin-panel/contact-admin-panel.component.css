@@ -1,0 +1,51 @@
+.contact-admin-panel-title-bar {
+  background-color: rgb(224, 224, 224);
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+.contact-admin-panel-title {
+  margin-right: 10px;
+}
+
+.input-field-1 {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 70px;
+  width: 20%;
+}
+
+.input-field-2 {
+  margin-top: 10px;
+  height: 70px;
+  width: 75%;
+}
+
+.input-field-3 {
+  margin-left: 10px;
+  width: 96%;
+}
+
+.contact-admin-panel-bottom {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 70px;
+}
+
+.contact-admin-add-button {
+  color: black;
+}
+
+.contact-admin-add-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.inquiry-panel-popup-button-2 {
+  margin-left: 400px;
+}

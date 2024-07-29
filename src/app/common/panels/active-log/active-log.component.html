@@ -1,0 +1,84 @@
+<div class="active-log-popup-head">
+    <mat-toolbar class="active-log-title-bar">
+      <span class="active-log-title">Activity Log</span>
+      <span class="active-log-position"><b>Position: </b>Name of the position</span>
+      <span class="flex-spacer"></span>
+      <button mat-icon-button mat-dialog-close class="close-button">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-divider></mat-divider>
+
+    <div class="active-log-filters-1">
+      <mat-chip-set aria-label="Fish selection">
+        <mat-chip>Point </mat-chip>
+        <mat-chip>Line </mat-chip>
+        <mat-chip>Polygon </mat-chip>
+        <mat-chip>Attribute</mat-chip>
+        <mat-chip>Buffer</mat-chip>
+        <mat-chip>Tag</mat-chip>
+        <mat-chip>Reminder</mat-chip>
+        <mat-chip>Inquiry</mat-chip>
+        <mat-chip>Map with</mat-chip>
+        <mat-chip>Report generation</mat-chip>
+        <mat-chip>Import</mat-chip>
+        <mat-chip>Export</mat-chip>
+        <mat-chip>Print</mat-chip>
+        <mat-chip>Log in/ Log out</mat-chip>
+        <mat-chip disabled>Feature change/ Delete</mat-chip>
+      </mat-chip-set>
+    </div>
+
+    <div class="active-log-filters-2">
+      <mat-form-field appearance="fill" class="active-log-filters-2-search">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Search" >
+        <button mat-button *ngIf="searchValue" matSuffix mat-icon-button aria-label="Clear">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-icon matSuffix>search</mat-icon> </mat-form-field>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="active-log-body">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="action_id">
+          <th mat-header-cell *matHeaderCellDef > ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.action_id}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Action </th>
+          <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="time">
+          <th mat-header-cell *matHeaderCellDef> Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="active-log-table-header"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="active-log-table-body"></tr>
+      </table>
+    </div>
+</div>

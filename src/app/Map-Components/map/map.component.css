@@ -299,3 +299,11 @@
   font-weight: lighter;
   margin-right: 5px;
 }
+
+.settings-menu-container {
+  width: 300px;
+}
+
+.settings-menu-item {
+  min-height: 30px;
+}

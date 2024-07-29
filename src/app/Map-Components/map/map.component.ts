@@ -13,6 +13,8 @@ import { Geometry } from 'ol/geom';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 import { OpenLayerService } from '../../openLayerServices/open-layer.service';
 import { CommonModule } from '@angular/common'; // Import CommonModule
@@ -24,16 +26,21 @@ import { ReminderPanelPopupComponent } from '../../common/panels/add-reminder-pa
 import { ReminderVPanelPopupComponent } from '../../common/panels/view-reminder-panel/reminder-v-panel-popup.component';
 import { TagPanelPopupComponent } from '../../common/panels/add-tag-panel/tag-panel-popup.component';
 import { NotificationPanelComponent } from '../../common/panels/notification-panel/notification-panel.component';
+import { ActiveLogComponent } from '../../common/panels/active-log/active-log.component';
+import { ContactAdminPanelComponent } from '../../common/panels/contact-admin-panel/contact-admin-panel.component';
+import { ProfilePanelComponent } from '../../common/panels/profile-panel/profile-panel.component';
 
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [MatButtonModule, MatDialogModule],
+  imports: [MatButtonModule, MatDialogModule, MatMenuModule, MatIconModule],
   templateUrl: './map.component.html',
   styleUrl: './map.component.css',
 })
 export class MapComponent implements OnInit, AfterViewInit {
   @ViewChild('mapElement') mapElementRef!: ElementRef;
+
+  isNotificationsPanelOpen = false;
 
   constructor(
     private openLayerService: OpenLayerService,
@@ -97,14 +104,75 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
   // !-------------------------------
   OpenNotificationPanel() {
-    const dialogRef = this.dialog.open(NotificationPanelComponent, {
-      width: '250px',
-      position: { top: '50px', right: '50px' },
-    });
+    if (this.isNotificationsPanelOpen) {
+      this.dialog.closeAll();
+    } else {
+      const dialogRef = this.dialog.open(NotificationPanelComponent, {
+        width: '350px',
+        maxHeight: '700px',
+        position: { top: '50px', right: '50px' },
+        hasBackdrop: false,
+      });
+      dialogRef.afterClosed().subscribe((result) => {
+        console.log('The dialog was closed');
+        this.isNotificationsPanelOpen = false;
+      });
+      this.isNotificationsPanelOpen = true;
+    }
+  }
 
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-    });
+  // ********************************************** //
+  // ********************************************** //
+  // !-------------------------------
+  OpenActivityLog() {
+    if (this.isNotificationsPanelOpen) {
+      this.dialog.closeAll();
+    } else {
+      const dialogRef = this.dialog.open(ActiveLogComponent, {
+        maxWidth: '1000px',
+        width: '1000px',
+        maxHeight: '600px',
+      });
+      dialogRef.afterClosed().subscribe((result) => {
+        console.log('The dialog was closed');
+        this.isNotificationsPanelOpen = false;
+      });
+      this.isNotificationsPanelOpen = true;
+    }
+  }
+  // !-------------------------------
+  OpenContactAdmin() {
+    if (this.isNotificationsPanelOpen) {
+      this.dialog.closeAll();
+    } else {
+      const dialogRef = this.dialog.open(ContactAdminPanelComponent, {
+        maxWidth: '1000px',
+        width: '800px',
+        maxHeight: '600px',
+      });
+      dialogRef.afterClosed().subscribe((result) => {
+        console.log('The dialog was closed');
+        this.isNotificationsPanelOpen = false;
+      });
+      this.isNotificationsPanelOpen = true;
+    }
+  }
+  // !-------------------------------
+  OpenProfile() {
+    if (this.isNotificationsPanelOpen) {
+      this.dialog.closeAll();
+    } else {
+      const dialogRef = this.dialog.open(ProfilePanelComponent, {
+        maxWidth: '1000px',
+        width: '500px',
+        maxHeight: '600px',
+      });
+      dialogRef.afterClosed().subscribe((result) => {
+        console.log('The dialog was closed');
+        this.isNotificationsPanelOpen = false;
+      });
+      this.isNotificationsPanelOpen = true;
+    }
   }
   // !-------------------------------
 

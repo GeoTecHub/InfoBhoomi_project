@@ -41,11 +41,11 @@
 
 <div class="reminder-panel-popup-datepicker">
     <mat-form-field >
-        <mat-label>Reminder date <mat-icon aria-hidden="false" fontIcon="calendar_month"></mat-icon></mat-label>
+        <mat-label>Reminder date</mat-label>
         <input matInput [matDatepicker]="picker">
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle  matIconSuffix [for]="picker">
-          <mat-icon matDatepickerToggleIcon >keyboard_arrow_down</mat-icon>
+          <mat-icon matDatepickerToggleIcon >calendar_month</mat-icon>
         </mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>

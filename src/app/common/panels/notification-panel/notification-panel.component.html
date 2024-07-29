@@ -1,7 +1,60 @@
-<div class="notification-panel-content">
-    <h3>Notifications</h3>
-    <ul class="notification-list">
-      <li *ngFor="let notification of notifications">{{ notification }}</li>
-
-    </ul>
+<div class="notification-panel-head">
+  <div class="notification-panel-header">
+    <label>Notifications</label>
   </div>
+<div class="notifications-clear-button">
+  <button >Mark all as read</button>
+</div>
+</div>
+
+<div class="notification-list-body">
+  <mat-accordion >
+    <mat-expansion-panel *ngFor="let notification of notifications" >
+      <mat-expansion-panel-header>
+        <mat-panel-title class="notification-title">  {{ notification.title }} 
+          <mat-icon 
+          style=" margin-left: 5px; color: rgb(0, 132, 155);">
+          {{ notification.icon }}
+        </mat-icon>
+      </mat-panel-title>
+        <span matIconSuffix class="notification-time-stamp" style="display: flex;">
+          {{ notification.timestamp }}
+          <mat-icon 
+          style="font-size: 16px; margin-top: 3px; margin-left: 5px;"
+          >schedule</mat-icon>
+        </span>
+        <!-- <mat-panel-description>
+          Short description
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+      <div class="notification-expansion-body">
+        <div class="notification-expansion-body-section-1">
+          <div style="margin-right: 30px;">
+            <b>Reminder ID: </b>{{notification.n_id}}
+          </div>
+          <div>
+            <b>Property ID: </b>{{notification.property_id}}
+          </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <p>
+          {{ notification.content }}
+        </p>
+
+        <div class="notification-expansion-body-section-2">
+          <div style="margin-right: 30px; margin-top: 8px;">
+            <button style="background-color: rgb(197, 216, 218); padding-left: 10px; padding-right: 10px; border-radius: 5px;">Mark as read</button>
+          </div>
+          <div>
+            <section class="example-section">
+              <mat-checkbox class="example-margin">Action Taken</mat-checkbox>
+            </section>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+</mat-accordion>
+</div>
+

@@ -1,0 +1,45 @@
+<div class="contact-admin-panel-popup-title">
+    <mat-toolbar class="contact-admin-panel-title-bar">
+        <span class="contact-admin-panel-title">Contact Admin</span>
+        <mat-icon>
+            contact_support
+          </mat-icon>
+        <span class="flex-spacer"></span>
+        <button mat-icon-button mat-dialog-close class="close-button">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-toolbar>
+</div>
+
+<div>
+    <form class="contact-admin-panel-form">
+        <mat-form-field class="input-field-1">
+          <mat-label>Telegram ID</mat-label>
+          <input matInput placeholder="Ex. 987537...">
+        </mat-form-field>
+        <mat-form-field class="input-field-2">
+            <mat-label>Subject</mat-label>
+            <input matInput placeholder="Ex. Type subject...">
+        </mat-form-field>
+        <mat-form-field class="input-field-3">
+            <mat-label>Message</mat-label>
+            <textarea matInput placeholder="Ex. Type message here..."></textarea>
+        </mat-form-field>
+      </form>
+</div>
+
+<div class="contact-admin-panel-bottom">
+    <mat-dialog-actions class="inquiry-panel-popup-button" align="start" >
+        <button  mat-button (click)="browseFile()"
+        style="background-color: rgb(67, 202, 112); color: rgb(43, 43, 43);">
+            Add Attachments
+            <mat-icon fontIcon="add_circle"></mat-icon>
+        </button>
+        <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;">
+      </mat-dialog-actions>
+      <mat-dialog-actions class="inquiry-panel-popup-button-2" align="end" >
+        <button  mat-flat-button mat-dialog-close>Send
+            <mat-icon fontIcon="send"></mat-icon>
+        </button>
+      </mat-dialog-actions>
+</div>

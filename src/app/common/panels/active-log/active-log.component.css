@@ -1,0 +1,44 @@
+.active-log-title-bar {
+  background-color: rgb(224, 224, 224);
+}
+
+.active-log-position {
+  margin-left: 100px;
+  font-size: 14px;
+  color: rgb(53, 53, 53);
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+.active-log-filters-1 {
+  margin-left: 15px;
+}
+
+.active-log-filters-2 {
+  margin-left: 15px;
+}
+
+.active-log-filters-2-search {
+  height: 65px;
+  width: 400px;
+}
+
+.active-log-body {
+  overflow-y: auto; /* Enable vertical scrollbar */
+  max-height: 350px;
+}
+
+.active-log-table-header {
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Ensure it's above other elements */
+  background-color: rgb(0, 90, 97);
+  height: 50px;
+  color: white;
+}
+
+.active-log-table-body {
+  height: 40px;
+}
