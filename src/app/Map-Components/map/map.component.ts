@@ -23,6 +23,12 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 })
 export class MapComponent implements OnInit, AfterViewInit {
   @ViewChild('mapElement') mapElementRef!: ElementRef;
+  sidebarOpen = false;
+  
+  //Function to open the sidebar of map component interface (button id="toggle-sidebar-button")
+  toggleSidebar() {
+    this.sidebarOpen = !this.sidebarOpen;
+  }
 
   constructor(private openLayerService: OpenLayerService) {}
   ngOnInit(): void {}

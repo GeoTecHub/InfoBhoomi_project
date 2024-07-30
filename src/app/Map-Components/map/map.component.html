@@ -1,80 +1,102 @@
-
-<div id="map" class="map-container" #mapElement>
-
+<div id="map" class="item map-container" #mapElement>
   <div class="ribbon-container">
-    
-    <div class="first-raw">
-      <div class="ribbon-container-left-corner-buttons">
-        <button><img src="/LAYERS BUTTON.svg" alt="Layers" ></button>
-        <button><img src="/HISTORY BUTTON.svg" alt="History" ></button>
-        <button><img src="/VEHICLE TRACKING BUTTON.svg" alt="Vehicle Tracking" ></button>
-        <div action="" class="search-bar">
-          <input type="text" placeholder="Search">
-          <button type="submit"><img src="search icon.svg" alt="Search"></button>
-        </div>
-      </div>
 
-      <div class="top-right-corner-box">
-        <button><img src="/NOTIFICATIONS.svg" alt="Layers" /></button>
-        <button><img src="/FORMAT CHANGE ICON.svg" alt="History" /></button>
-        <div class="label-container">
-          <div class="row">
-            <label class="column1">Organization:</label>
-            <label class="column2">Label-organization</label>
-          </div>
-          <div class="row">
-            <label class="column1">Admin Name:</label>
-            <label class="column2">Label-admin-name</label>
-          </div>
-        </div>
-        <button><img src="/SETTINGS ICON.svg" alt="Vehicle Tracking" /></button>
+    <div class="logo"><img src="/Images_MapComponent/Ribbon/LOGO.svg " alt="Layers" /></div>
+  
+    <div class="first-row-left-corner">
+      <button class="btn1">LAYERS</button>
+      <button class="btn2">HISTORY</button>
+      <button class="btn3">TRACKING</button>
+      <div action="" class="search-bar">  
+        <input type="text" placeholder="Search">
+        <button type="submit"><img src="/Images_MapComponent/Ribbon-Container/search icon.svg" alt="Search"></button>                   
+      </div>     
+    </div>
+  
+    <div class="first-row-right-corner">
+      <button><img src="/Images_MapComponent/Ribbon-Container/Notifications.svg " alt="Layers" /></button>
+      <button><img src="/Images_MapComponent/Ribbon-Container/Format Change.svg " alt="Layers" /></button>
+      <div class="first-row-right-corner-label-container">
+        <label for="" class="row1-column1">Organization:</label>
+        <label for="" class="row1-column2">Label-Organization</label>
+        <label for="" class="row2-column1">Admin Name:</label>
+        <label for="" class="row2-column2">Label_Admin Name</label>
       </div>
+      <button><img src="/Images_MapComponent/Ribbon-Container/Settings.svg " alt="Layers" /></button>
+    </div>
+  
+    <div class="second-row-right-corner">
+      <button><img src="/Images_MapComponent/Ribbon-Container/Export.svg" alt="Export" ></button>
+      <button><img src="/Images_MapComponent/Ribbon-Container/Close.svg" alt="Close" ></button>
+      <button><img src="/Images_MapComponent/Ribbon-Container/Load Data.svg" alt="Load Data" ></button>
+      <button><img src="/Images_MapComponent/Ribbon-Container/Download.svg" alt="Download" ></button>
+      <button><img src="/Images_MapComponent/Ribbon-Container/Print.svg" alt="Print" ></button>
     </div>
 
-    <div class="second-raw">
-      <div class="ribbon-container-right-corner-buttons">
-        <button><img src="/EXPORT ICON.svg" alt="Export" ></button>
-        <button><img src="/CLOSE ICON.svg" alt="Close" ></button>
-        <button><img src="/LOAD DATA ICON.svg" alt="Load Data" ></button>
-        <button><img src="/DOWNLOAD ICON.svg" alt="Download" ></button>
-        <button><img src="/PRINT ICON.svg" alt="Print" ></button>
+    <div class="ribbon-container-second-raw-space">
+      <div class="ribbon-container-second-raw-space-location">
+        <label for=""> <img src="/Images_MapComponent/Ribbon/location_icon.svg" alt="" > Location: </label>
+        <label for="" class="loc_name">Badulla</label>
       </div>
-    </div>  
+    </div>
+  
   </div>
 
-  <div class="toolbar">
-    <select id="view-projection" (change)="onProjectionChange($event)" aria-label="Select Map Projection">
-      <option value="" disabled selected hidden class="map-projection-selctor-title">Map Projection</option>
-      <option value="EPSG:27700">Web Mercator (EPSG:27700)</option>
-      <option value="EPSG:23032">Web Mercator (EPSG:23032)</option>
-      <option value="EPSG:4326">WGS 84 (EPSG:4326)</option>
-      <option value="EPSG:5235">SLD99 (EPSG:5235)</option>
-      <!-- Add other projections as needed -->
-    </select>
-
-    <div class="draw-options">
-      <button (click)="setDrawingType('Point')"><img src="/INSERT POINT BUTTON.png" alt="Draw Point" class="button-img"></button>
-      <button (click)="setDrawingType('LineString')"><img src="/INSERT LINE BUTTON.png" alt="Draw Line" class="button-img"></button>
-      <button (click)="setDrawingType('Polygon')"><img src="/INSERT POLYGON BUTTON.png" alt="Draw Polygon" class="button-img"></button>
-      <button><img src="/ADD BUFFER BUTTON.png" alt="Add Buffer" class="button-img"></button>
-      <button><img src="/ADD TAG BUTTON.png" alt="Add Tag" class="button-img"></button>
-      <button><img src="/EDIT BUTTON.png" alt="Edit" class="button-img"></button>
-      <button><img src="/SPLIT BUTTON.png" alt="Split" class="button-img"></button>
-      <button><img src="/MERGE BUTTON.png" alt="Merge" class="button-img"></button>
-      <button><img src="/DELETE BUTTON.png" alt="Delete" class="button-img"></button>
-      <button><img src="/SNAP ON BUTTON.png" alt="Snap" class="button-img"></button>
-      <button><img src="/SELECT BUTTON.png" alt="Select" class="button-img"></button>
-      <button><img src="/PAN BUTTON.png" alt="Pan" class="button-img"></button>
-      <button><img src="/MEASURE BUTTON.png" alt="Measure" class="button-img"></button>
-      <button><img src="/ZOOM IN BUTTON.png" alt="Zoom In" class="button-img"></button>
-      <button><img src="/ZOOM OUT BUTTON.png" alt="Zoom Out" class="button-img"></button>
+  <div class="toolbar-panel">
+    <div class="current-layer">
+      <label for="" class="current-layer-lbl1">Current Layer: </label>
+      <label for="" class="current-layer-lbl2">Parcels</label>
     </div>
-   
-   
+    <div class="toolbar">
+      <button class="toolbar-button" (click)="setDrawingType('Point')"><img alt="Draw Point" src="/Images_MapComponent/Toolbar/point.svg"/></button>
+      <button class="toolbar-button" (click)="setDrawingType('LineString')"><img alt="Draw Line" src="/Images_MapComponent/Toolbar/line.svg"/></button>
+      <button class="toolbar-button" (click)="setDrawingType('Polygon')"><img alt="Draw Polygon" src="/Images_MapComponent/Toolbar/polygon.svg"/></button>
+      <button class="toolbar-button"><img alt="Add Buffer" src="/Images_MapComponent/Toolbar/add buffer.svg"/></button>
+      <button class="toolbar-button"><img alt="Tag" src="/Images_MapComponent/Toolbar/add tag.svg"/></button>
+      <button class="toolbar-button"><img alt="Edit" src="/Images_MapComponent/Toolbar/edit.svg"/></button>
+      <button class="toolbar-button"><img alt="Split" src="/Images_MapComponent/Toolbar/split.svg"/></button>
+      <button class="toolbar-button"><img alt="Merge" src="/Images_MapComponent/Toolbar/merge.svg"/></button>
+      <button class="toolbar-button"><img alt="Delete" src="/Images_MapComponent/Toolbar/delete.svg"/></button>
+      <button class="toolbar-button"><img alt="Span" src="/Images_MapComponent/Toolbar/snap.svg"/></button>
+      <button class="toolbar-button"><img alt="Select" src="/Images_MapComponent/Toolbar/select.svg"/></button>
+      <button class="toolbar-button"><img alt="Pantool" src="/Images_MapComponent/Toolbar/pantool.svg"/></button>
+      <button class="toolbar-button"><img alt="measure" src="/Images_MapComponent/Toolbar/measure.svg"/></button>
+      <button class="toolbar-button"><img alt="Zoom In" src="/Images_MapComponent/Toolbar/zoom in.svg"/></button>
+      <button class="toolbar-button"><img alt="Zoom Out" src="/Images_MapComponent/Toolbar/zoom out.svg"/></button>
+      <button class="toolbar-button"><img alt="Undo" src="/Images_MapComponent/Toolbar/undo.svg"/></button>
+      <img src="/Images_MapComponent/Toolbar/NORTH ARROW ICON.svg" alt="" class="north-arrow-icon">
+    
+    </div>
   </div>
   
+  <div class="sidebar-panel">
+    <button id="toggle-sidebar-button" class="sidebar-arrow-btn" (click)="toggleSidebar()">
+      <img src="/Images_MapComponent/Sidebar/SIDE PANEL DROP DOWN BUTTON.svg" alt="Open Sidebar">
+    </button>
+    <div id="sidebar" class="sidebar" [class.open]="sidebarOpen">
+      <div class="sidebar-buttons">
+        <button >LAND</button>
+        <button >BUILDING</button>
+        <button >LEGAL SPACE</button>
+        <button >EXTERNAL</button>
+      
+      </div>
+        
+    </div>
+  </div>
 
-    <!-- <label for="view-projection" >Map Projection</label> -->
- 
+  <div class="bottom-panel">
+    <div class="projection-cordinates">
+      <select id="view-projection" (change)="onProjectionChange($event)" aria-label="Select Map Projection">
+        <option value="EPSG:27700">Web Mercator (EPSG:27700)</option>
+        <option value="EPSG:23032">Web Mercator (EPSG:23032)</option>
+        <option value="EPSG:4326">WGS 84 (EPSG:4326)</option>
+        <option value="EPSG:5235">SLD99 (EPSG:5235)</option>
+        <!-- Add other projections as needed -->
+      </select>
+      <label for="">-16997629.7770, -8608103.4897</label><!-- cordinate value -->
+
+    </div>
+  </div>
 </div>
 
