@@ -1,0 +1,12 @@
+.history-panel-head {
+  position: sticky; /* Make the header sticky */
+  top: 0;
+  z-index: 2;
+}
+
+.history-panel-header {
+  font-size: 26px;
+  background-color: rgb(2, 112, 116);
+  color: white;
+  padding: 10px;
+}

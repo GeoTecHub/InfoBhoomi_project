@@ -29,6 +29,9 @@ import { NotificationPanelComponent } from '../../common/panels/notification-pan
 import { ActiveLogComponent } from '../../common/panels/active-log/active-log.component';
 import { ContactAdminPanelComponent } from '../../common/panels/contact-admin-panel/contact-admin-panel.component';
 import { ProfilePanelComponent } from '../../common/panels/profile-panel/profile-panel.component';
+import { VehicleTrackingPanelComponent } from '../../common/panels/vehicle-tracking-panel/vehicle-tracking-panel.component';
+import { HistoryPanelComponent } from '../../common/panels/history-panel/history-panel.component';
+import { DataImportComponent } from '../../common/panels/data-import/data-import.component';
 
 @Component({
   selector: 'app-map',
@@ -112,6 +115,58 @@ export class MapComponent implements OnInit, AfterViewInit {
         maxHeight: '700px',
         position: { top: '50px', right: '50px' },
         hasBackdrop: false,
+      });
+      dialogRef.afterClosed().subscribe((result) => {
+        console.log('The dialog was closed');
+        this.isNotificationsPanelOpen = false;
+      });
+      this.isNotificationsPanelOpen = true;
+    }
+  }
+  // !-------------------------------
+  OpenVehicleTracking() {
+    if (this.isNotificationsPanelOpen) {
+      this.dialog.closeAll();
+    } else {
+      const dialogRef = this.dialog.open(VehicleTrackingPanelComponent, {
+        width: '250px',
+        maxHeight: ' 700px',
+        position: { top: '50px', left: '520px' },
+        hasBackdrop: false,
+      });
+      dialogRef.afterClosed().subscribe((result) => {
+        console.log('The dialog was closed');
+        this.isNotificationsPanelOpen = false;
+      });
+      this.isNotificationsPanelOpen = true;
+    }
+  }
+  // !-------------------------------
+  OpenHistoryPanel() {
+    if (this.isNotificationsPanelOpen) {
+      this.dialog.closeAll();
+    } else {
+      const dialogRef = this.dialog.open(HistoryPanelComponent, {
+        width: '250px',
+        maxHeight: ' 700px',
+        position: { top: '50px', left: '420px' },
+        hasBackdrop: false,
+      });
+      dialogRef.afterClosed().subscribe((result) => {
+        console.log('The dialog was closed');
+        this.isNotificationsPanelOpen = false;
+      });
+      this.isNotificationsPanelOpen = true;
+    }
+  }
+  // !-------------------------------
+  OpenDataExport() {
+    if (this.isNotificationsPanelOpen) {
+      this.dialog.closeAll();
+    } else {
+      const dialogRef = this.dialog.open(DataImportComponent, {
+        width: '400px',
+        maxHeight: ' 700px',
       });
       dialogRef.afterClosed().subscribe((result) => {
         console.log('The dialog was closed');

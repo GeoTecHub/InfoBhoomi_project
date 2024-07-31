@@ -1,0 +1,29 @@
+<div class="history-panel-head">
+    <div class="history-panel-header">
+       <label>History</label>
+    </div>
+</div>
+    
+   <div class="history-panel-list-body">
+       <mat-accordion >
+         <mat-expansion-panel *ngFor="let item of items" >
+   
+           <mat-expansion-panel-header>
+             <mat-panel-title class="history-panel-title">  {{ item.title }} 
+           </mat-panel-title>
+             <!-- <mat-panel-description>
+               Short description
+             </mat-panel-description> -->
+           </mat-expansion-panel-header>
+   
+           <div class="history-panel-expansion-body">
+   
+             <p>
+               {{ item.content }}
+             </p>
+   
+           </div>
+         </mat-expansion-panel>
+       </mat-accordion>
+     </div>
+     

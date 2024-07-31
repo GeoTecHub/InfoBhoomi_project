@@ -1,0 +1,74 @@
+.import-data-title-bar {
+  font-size: 26px;
+  background-color: rgb(2, 112, 116);
+  color: white;
+  padding: 10px;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+.close-button {
+  color: white;
+}
+
+.reminder-panel-popup-dropdown {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-button {
+  background-color: rgb(194, 194, 194);
+  color: rgb(71, 71, 71);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.input-button-2 {
+  background-color: rgb(82, 82, 82);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+-data-title-bar {
+  font-size: 26px;
+  background-color: rgb(2, 112, 116);
+  color: white;
+  padding: 10px;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+.close-button {
+  color: white;
+}
+
+.reminder-panel-popup-dropdown {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-button {
+  background-color: rgb(194, 194, 194);
+  color: rgb(71, 71, 71);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.input-button-2 {
+  background-color: rgb(82, 82, 82);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

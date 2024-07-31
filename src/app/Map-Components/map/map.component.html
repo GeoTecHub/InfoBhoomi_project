@@ -12,8 +12,19 @@
     <div class="first-raw">
       <div class="ribbon-container-left-corner-buttons">
         <button><img src="/LAYERS BUTTON.svg" alt="Layers" ></button>
-        <button><img src="/HISTORY BUTTON.svg" alt="History" ></button>
-        <button><img src="/VEHICLE TRACKING BUTTON.svg" alt="Vehicle Tracking" ></button>
+
+      <!-- * history button -->
+        <button (click)="OpenHistoryPanel()" class="history-button">
+          <img src="/HISTORY BUTTON.svg" alt="History" >
+        </button>
+      <!-- * -->
+
+      <!-- * vehicle track button -->
+        <button (click)="OpenVehicleTracking()" class="vehicle-tracking-button">
+          <img src="/VEHICLE TRACKING BUTTON.svg" alt="Vehicle Tracking" >
+        </button>
+      <!-- * -->
+
         <div action="" class="search-bar">
           <input type="text" placeholder="Search">
           <button type="submit"><img src="search icon.svg" alt="Search"></button>
@@ -28,7 +39,9 @@
         </button>
         <!-- * -->
 
-        <button><img src="/FORMAT CHANGE ICON.svg" alt="History" /></button>
+        <button>
+          <img src="/FORMAT CHANGE ICON.svg" alt="History" />
+        </button>
         <div class="label-container">
           <div class="row">
             <label class="column1">Organization:</label>
@@ -50,7 +63,7 @@
             <mat-icon >
               history
             </mat-icon>
-            Active Log
+            Activity Log
           </button>
 
           <button mat-menu-item class="settings-menu-item" (click)="OpenContactAdmin()">
@@ -88,7 +101,13 @@
 
     <div class="second-raw">
       <div class="ribbon-container-right-corner-buttons">
-        <button><img src="/EXPORT ICON.svg" alt="Export" ></button>
+
+        <!-- * data export button -->
+        <button (click)="OpenDataExport()" class="data-import-button">
+          <img src="/EXPORT ICON.svg" alt="Export" >
+        </button>
+        <!-- * -->
+
         <button><img src="/CLOSE ICON.svg" alt="Close" ></button>
         <button><img src="/LOAD DATA ICON.svg" alt="Load Data" ></button>
         <button><img src="/DOWNLOAD ICON.svg" alt="Download" ></button>

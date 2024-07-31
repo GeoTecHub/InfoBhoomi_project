@@ -1,0 +1,29 @@
+<div class="vehicle-tracking-head">
+ <div class="vehicle-tracking-header">
+    <label>Vehicle Tracking</label>
+ </div>
+</div>
+ 
+<div class="vehicle-tracking-list-body">
+    <mat-accordion >
+      <mat-expansion-panel *ngFor="let vehicle of vehicles" >
+
+        <mat-expansion-panel-header>
+          <mat-panel-title class="vehicle-tracking-title">  {{ vehicle.title }} 
+        </mat-panel-title>
+          <!-- <mat-panel-description>
+            Short description
+          </mat-panel-description> -->
+        </mat-expansion-panel-header>
+
+        <div class="vehicle-tracking-expansion-body">
+
+          <p>
+            {{ vehicle.content }}
+          </p>
+
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  

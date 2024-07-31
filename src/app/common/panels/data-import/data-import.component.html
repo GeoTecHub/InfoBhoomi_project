@@ -1,0 +1,51 @@
+<div class="import-data-popup-title">
+    <mat-toolbar class="import-data-title-bar">
+        <span class="import-data-panel-title">Import Data</span>
+        <mat-icon style="margin-left: 5px; ">
+            publish
+        </mat-icon>
+        <span class="flex-spacer"></span>
+        <button mat-icon-button mat-dialog-close class="close-button">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-toolbar>
+</div>
+ 
+<mat-dialog-content class="content">
+    <mat-form-field style="width: 100%;">
+        <mat-label>Data Type</mat-label>
+        <mat-select>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field >
+        <mat-label>Data Set Name</mat-label>
+        <input matInput #message maxlength="256" placeholder="Ex. Road dataset...">
+    </mat-form-field>
+
+
+    <button mat-button class="input-button">
+        <strong>Choose File</strong>
+        <mat-icon aria-hidden="false" fontIcon="upload"></mat-icon>
+    </button>
+
+    <button mat-button class="input-button">
+        <strong>Choose Coordinate File</strong>
+        <mat-icon aria-hidden="false" fontIcon="upload"></mat-icon>
+    </button>
+
+    <button mat-button class="input-button">
+        <strong>Choose Overview File</strong>
+        <mat-icon aria-hidden="false" fontIcon="upload"></mat-icon>
+    </button>
+
+    <button mat-button class="input-button-2">
+        Import
+        <mat-icon aria-hidden="false" fontIcon="add_circle"></mat-icon>
+    </button>
+
+</mat-dialog-content>
+
