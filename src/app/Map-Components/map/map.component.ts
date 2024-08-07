@@ -13,11 +13,14 @@ import { Feature } from 'ol';
 import { Geometry } from 'ol/geom';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 import { FormsModule } from '@angular/forms'; // Import FormsModule
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [],
+  imports: [MatMenuModule,MatIconModule, MatButtonModule],
   templateUrl: './map.component.html',
   styleUrl: './map.component.css',
 })
