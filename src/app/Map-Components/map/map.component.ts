@@ -43,9 +43,8 @@ export class MapComponent implements OnInit, AfterViewInit {
   //Function for opening the Print component
   OpenPrintData() {
     const dialogRef = this.dialog.open(PrintComponent, {
-      minWidth: '600px',
-      maxWidth: '800px',
-      position: { left: '80px' },
+      width:'80%',
+      position: { left: '10%' },
       
     });
 
@@ -57,9 +56,8 @@ export class MapComponent implements OnInit, AfterViewInit {
   //Function for opening the ExportData component
   OpenExporttData() {
     const dialogRef = this.dialog.open(ExportDataComponent, {
-      minWidth: '600px',
-      maxWidth: '800px',
-      position: { left: '80px' },
+      width:'80%',
+      position: { left: '10%' },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
