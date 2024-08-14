@@ -15,8 +15,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 6.5vh;
   min-height: 60px;
+  max-height: 70px;
+  height: 6.5vh;
   z-index: 1000;
 }
 
@@ -282,9 +283,9 @@
   gap: 2%;
   height: 85vh;
   right: 1.8vw;
-  width: 10%;
-  min-width: 100px;
-  top: 10vh;
+  width: 12%;
+  min-width: 90px;
+  top: 100px;
   background: none;
   align-items: flex-start;
   pointer-events: none;
@@ -294,7 +295,7 @@
   position: absolute;
   background-color: #097c2c;
   padding: 0;
-  width: 70%;
+  width: 75%;
   height: 2.7vh;
   display: flex;
   flex-direction: raw;
@@ -339,7 +340,7 @@
   align-items: flex-end;
 }
 
-.toolbar-button {
+.toolbar button {
   display: flex;
   background-color: #005f86;
   border: 0.05rem solid #acc3c9;
@@ -352,7 +353,7 @@
   pointer-events: all;
 }
 
-.toolbar-button img {
+.toolbar button img {
   width: 63%;
   height: 3vh;
 }
@@ -374,9 +375,9 @@
   padding-left: 15px;
   cursor: pointer;
   width: 2.5%;
-  min-width: 50px;
+  /* min-width: 50px; */
   height: 5vh;
-  min-height: 50px;
+  /* min-height: 50px; */
 }
 
 .sidebar-arrow-btn img {
@@ -386,9 +387,9 @@
 
 .sidebar {
   position: fixed;
-  top: 6vh;
-  left: -10%;
-  width: 10%;
+  top: 70px;
+  left: -20%;
+  width: 20%;
   height: 89vh;
   background-color: none;
   background: none;
@@ -406,7 +407,7 @@
   flex-direction: column;
   display: flex;
   gap: 50px;
-  width: 100%;
+  width: 50%;
 }
 
 .sidebar-buttons button {
@@ -437,7 +438,7 @@
   z-index: 996;
 }
 
-.projection-cordinates select {
+/* .projection-cordinates select {
   color: white;
   background: none;
   background-color: #005f86;
@@ -445,33 +446,36 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-}
+} */
 
 .projection-cordinates label {
   background: none;
+  display: flex;
   color: white;
   width: auto;
   text-align: center;
   height: 100%;
   text-wrap: nowrap;
+  font-size: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0.8%;
 }
 
 .projection-cordinates {
   position: absolute;
   display: flex;
   flex-direction: row;
-  font-size: 0.5vw;
-  height: 2.4vh;
+  font-size: 0.9vw;
+  height: auto;
   top: 1px;
-  gap: 2%;
+  /* gap: 2%; */
   right: 120px;
   background-color: #005f86;
-  padding: 0.1%;
-  width: 18%;
-  min-width: 180px;
-  text-align: center;
+  width: auto;
+  min-width:100px ;
+  padding:0 0.5% 0 0.5%;
+  /* min-width: 180px; */
   align-items: center;
   justify-content: center;
 }
@@ -541,7 +545,8 @@
   }
 
   .toolbar-panel {
-    top: 125px;
+    top: 15vh;
+    height: 80vh;
   }
 
   .btn1,
@@ -641,6 +646,10 @@
   .sidebar-arrow-btn img {
     width: 100%;
     height: 100%;
+  }
+
+  .projection-cordinates label {
+    font-size: 5px;
   }
 }
 @media (max-width: 1400px) {

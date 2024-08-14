@@ -39,23 +39,23 @@
     </div>
   
     <div class="first-row-right-corner">
-      <button><img src="/Images_MapComponent/Ribbon-Container/Notifications.svg " alt="Layers" /></button>
-      <button><img src="/Images_MapComponent/Ribbon-Container/Format Change.svg " alt="Layers" /></button>
+      <button ><img src="/Images_MapComponent/Ribbon-Container/Notifications.svg " alt="notification" /></button>
+      <button><img src="/Images_MapComponent/Ribbon-Container/Format Change.svg " alt="change-format" /></button>
       <div class="first-row-right-corner-label-container">
         <label for="" class="row1-column1">Organization:</label>
         <label for="" class="row1-column2">Label-Organization</label>
         <label for="" class="row2-column1">Admin Name:</label>
         <label for="" class="row2-column2" >Label_Admin Name</label>
       </div>
-      <button><img src="/Images_MapComponent/Ribbon-Container/Settings.svg " alt="Layers" /></button>
+      <button><img src="/Images_MapComponent/Ribbon-Container/Settings.svg " alt="settings" /></button>
     </div>
   
     <div class="second-row-right-corner">
-      <button (click)="OpenExporttData()"><img src="/Images_MapComponent/Ribbon-Container/Export.svg" alt="Export" ></button>
-      <button><img src="/Images_MapComponent/Ribbon-Container/Close.svg" alt="Close" ></button>
-      <button><img src="/Images_MapComponent/Ribbon-Container/Load Data.svg" alt="Load Data" ></button>
-      <button><img src="/Images_MapComponent/Ribbon-Container/Download.svg" alt="Download" ></button>
-      <button (click)="OpenPrintData()"><img src="/Images_MapComponent/Ribbon-Container/Print.svg" alt="Print" ></button>
+      <button (click)="OpenExporttData()" class="data-export-btn"><img src="/Images_MapComponent/Ribbon-Container/Export.svg" alt="Export" ></button>
+      <button class="close-btn"><img src="/Images_MapComponent/Ribbon-Container/Close.svg" alt="Close" ></button>
+      <button class="load-data-btn"><img src="/Images_MapComponent/Ribbon-Container/Load Data.svg" alt="Load Data" ></button>
+      <button class="download-btn"><img src="/Images_MapComponent/Ribbon-Container/Download.svg" alt="Download" ></button>
+      <button (click)="OpenPrintData()" class="print-btn"><img src="/Images_MapComponent/Ribbon-Container/Print.svg" alt="Print" ></button>
     </div>
 
     <div class="ribbon-container-second-raw-space">
@@ -73,22 +73,22 @@
       <label for="" class="current-layer-lbl2">Parcels</label>
     </div>
     <div class="toolbar">
-      <button class="toolbar-button" (click)="setDrawingType('Point')"><img alt="Draw Point" src="/Images_MapComponent/Toolbar/point.svg"/></button>
-      <button class="toolbar-button" (click)="setDrawingType('LineString')"><img alt="Draw Line" src="/Images_MapComponent/Toolbar/line.svg"/></button>
-      <button class="toolbar-button" (click)="setDrawingType('Polygon')"><img alt="Draw Polygon" src="/Images_MapComponent/Toolbar/polygon.svg"/></button>
-      <button class="toolbar-button"><img alt="Add Buffer" src="/Images_MapComponent/Toolbar/add buffer.svg"/></button>
-      <button class="toolbar-button"><img alt="Tag" src="/Images_MapComponent/Toolbar/add tag.svg"/></button>
-      <button class="toolbar-button"><img alt="Edit" src="/Images_MapComponent/Toolbar/edit.svg"/></button>
-      <button class="toolbar-button"><img alt="Split" src="/Images_MapComponent/Toolbar/split.svg"/></button>
-      <button class="toolbar-button"><img alt="Merge" src="/Images_MapComponent/Toolbar/merge.svg"/></button>
-      <button class="toolbar-button"><img alt="Delete" src="/Images_MapComponent/Toolbar/delete.svg"/></button>
-      <button class="toolbar-button"><img alt="Span" src="/Images_MapComponent/Toolbar/snap.svg"/></button>
-      <button class="toolbar-button"><img alt="Select" src="/Images_MapComponent/Toolbar/select.svg"/></button>
-      <button class="toolbar-button"><img alt="Pantool" src="/Images_MapComponent/Toolbar/pantool.svg"/></button>
-      <button class="toolbar-button"><img alt="measure" src="/Images_MapComponent/Toolbar/measure.svg"/></button>
-      <button class="toolbar-button"><img alt="Zoom In" src="/Images_MapComponent/Toolbar/zoom in.svg"/></button>
-      <button class="toolbar-button"><img alt="Zoom Out" src="/Images_MapComponent/Toolbar/zoom out.svg"/></button>
-      <button class="toolbar-button"><img alt="Undo" src="/Images_MapComponent/Toolbar/undo.svg"/></button>
+      <button class="draw-point-btn" (click)="setDrawingType('Point')"><img alt="Draw Point" src="/Images_MapComponent/Toolbar/point.svg"/></button>
+      <button class="draw-line-btn" (click)="setDrawingType('LineString')"><img alt="Draw Line" src="/Images_MapComponent/Toolbar/line.svg"/></button>
+      <button class="draw-polygon-btn" (click)="setDrawingType('Polygon')"><img alt="Draw Polygon" src="/Images_MapComponent/Toolbar/polygon.svg"/></button>
+      <button class="add-buffer-btn"><img alt="Add Buffer" src="/Images_MapComponent/Toolbar/add buffer.svg"/></button>
+      <button class="tag-btn"><img alt="Tag" src="/Images_MapComponent/Toolbar/add tag.svg"/></button>
+      <button class="edit-btn"><img alt="Edit" src="/Images_MapComponent/Toolbar/edit.svg"/></button>
+      <button class="split-btn"><img alt="Split" src="/Images_MapComponent/Toolbar/split.svg"/></button>
+      <button class="merge-btn"><img alt="Merge" src="/Images_MapComponent/Toolbar/merge.svg"/></button>
+      <button class="delete-btn"><img alt="Delete" src="/Images_MapComponent/Toolbar/delete.svg"/></button>
+      <button class="span-btn"><img alt="Span" src="/Images_MapComponent/Toolbar/snap.svg"/></button>
+      <button class="select-btn"><img alt="Select" src="/Images_MapComponent/Toolbar/select.svg"/></button>
+      <button class="pantool-btn"><img alt="Pantool" src="/Images_MapComponent/Toolbar/pantool.svg"/></button>
+      <button class="measure-btn"><img alt="measure" src="/Images_MapComponent/Toolbar/measure.svg"/></button>
+      <button class="zoom-in-btn"><img alt="Zoom In" src="/Images_MapComponent/Toolbar/zoom in.svg"/></button>
+      <button class="zoom-out-btn"><img alt="Zoom Out" src="/Images_MapComponent/Toolbar/zoom out.svg"/></button>
+      <button class="undo-btn"><img alt="Undo" src="/Images_MapComponent/Toolbar/undo.svg"/></button>
       <img src="/Images_MapComponent/Toolbar/NORTH ARROW ICON.svg" alt="" class="north-arrow-icon">
     
     </div>
@@ -100,10 +100,10 @@
     </button>
     <div id="sidebar" class="sidebar" [class.open]="sidebarOpen">
       <div class="sidebar-buttons">
-        <button >LAND</button>
-        <button >BUILDING</button>
-        <button >LEGAL SPACE</button>
-        <button >EXTERNAL</button>
+        <button class="land-btn">LAND</button>
+        <button class="building-btn">BUILDING</button>
+        <button class="legal-space-btn">LEGAL SPACE</button>
+        <button class="external-btn">EXTERNAL</button>
       
       </div>
         
@@ -112,13 +112,13 @@
 
   <div class="bottom-panel">
     <div class="projection-cordinates">
-      <select id="view-projection" (change)="onProjectionChange($event)" aria-label="Select Map Projection">
+      <!-- <select id="view-projection" (change)="onProjectionChange($event)" aria-label="Select Map Projection">
         <option value="EPSG:27700">Web Mercator (EPSG:27700)</option>
         <option value="EPSG:23032">Web Mercator (EPSG:23032)</option>
         <option value="EPSG:4326">WGS 84 (EPSG:4326)</option>
-        <option value="EPSG:5235">SLD99 (EPSG:5235)</option>
+        <option value="EPSG:5235">SLD99 (EPSG:5235)</option> -->
         <!-- Add other projections as needed -->
-      </select>
+      <!-- </select> -->
       <label for="">-16997629.7770, -8608103.4897</label><!-- cordinate value -->
 
     </div>
