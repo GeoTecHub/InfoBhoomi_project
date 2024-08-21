@@ -32,6 +32,7 @@ import { ProfilePanelComponent } from '../../common/panels/profile-panel/profile
 import { VehicleTrackingPanelComponent } from '../../common/panels/vehicle-tracking-panel/vehicle-tracking-panel.component';
 import { HistoryPanelComponent } from '../../common/panels/history-panel/history-panel.component';
 import { DataImportComponent } from '../../common/panels/data-import/data-import.component';
+import { LoadDataComponent } from '../../common/panels/load-data/load-data.component';
 
 @Component({
   selector: 'app-map',
@@ -161,19 +162,27 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
   // !-------------------------------
   OpenDataExport() {
-    if (this.isNotificationsPanelOpen) {
-      this.dialog.closeAll();
-    } else {
-      const dialogRef = this.dialog.open(DataImportComponent, {
-        width: '400px',
-        maxHeight: ' 700px',
-      });
-      dialogRef.afterClosed().subscribe((result) => {
-        console.log('The dialog was closed');
-        this.isNotificationsPanelOpen = false;
-      });
-      this.isNotificationsPanelOpen = true;
-    }
+    const dialogRef = this.dialog.open(DataImportComponent, {
+      width: '400px',
+      maxHeight: ' 700px',
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      this.isNotificationsPanelOpen = false;
+    });
+    this.isNotificationsPanelOpen = true;
+  }
+  // !-------------------------------
+  OpenLoadData() {
+    const dialogRef = this.dialog.open(LoadDataComponent, {
+      width: '500px',
+      maxHeight: ' 700px',
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      this.isNotificationsPanelOpen = false;
+    });
+    this.isNotificationsPanelOpen = true;
   }
 
   // ********************************************** //
