@@ -15,15 +15,16 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { PrintComponent } from '../../common/panels/print/print.component';
 import { ExportDataComponent } from '../../common/panels/export-data/export-data.component';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import 'ol/ol.css';
 
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [MatMenuModule,MatIconModule, MatButtonModule],
+  imports: [MatMenuModule, MatIconModule, MatButtonModule],
   templateUrl: './map.component.html',
   styleUrl: './map.component.css',
 })
@@ -35,7 +36,7 @@ export class MapComponent implements OnInit, AfterViewInit {
     private openLayerService: OpenLayerService,
     public dialog: MatDialog
   ) {}
-  
+
   //Function to open the sidebar of map component interface (button id="toggle-sidebar-button")
   toggleSidebar() {
     this.sidebarOpen = !this.sidebarOpen;
@@ -43,9 +44,8 @@ export class MapComponent implements OnInit, AfterViewInit {
   //Function for opening the Print component
   OpenPrintData() {
     const dialogRef = this.dialog.open(PrintComponent, {
-      width:'80%',
+      width: '80%',
       position: { left: '10%' },
-      
     });
 
     dialogRef.afterClosed().subscribe((result) => {
@@ -56,7 +56,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   //Function for opening the ExportData component
   OpenExporttData() {
     const dialogRef = this.dialog.open(ExportDataComponent, {
-      width:'80%',
+      width: '80%',
       position: { left: '10%' },
     });
 
@@ -65,40 +65,36 @@ export class MapComponent implements OnInit, AfterViewInit {
     });
   }
 
-  
   ngOnInit(): void {}
   ngAfterViewInit(): void {
     this.openLayerService.initializeMap(this.mapElementRef.nativeElement);
     this.openLayerService.createMousePositionControl();
     this.openLayerService.addselectionInteraction();
-  };
+  }
   setDrawingType(type: 'Point' | 'LineString' | 'Polygon'): void {
     // if (this.parentSelectedLayer!) { // where does this comes from??
-      this.openLayerService.addDrawingInteraction(
-        type,
-        (drawnFeature: Feature<Geometry>) => {
-          // Here, you handle the drawnFeature. For example:
-          console.log('A feature was drawn:', drawnFeature);
+    this.openLayerService.addDrawingInteraction(
+      type,
+      (drawnFeature: Feature<Geometry>) => {
+        // Here, you handle the drawnFeature. For example:
+        console.log('A feature was drawn:', drawnFeature);
 
-          const vectorSource = new VectorSource({
-            features: [drawnFeature],
-          });
+        const vectorSource = new VectorSource({
+          features: [drawnFeature],
+        });
 
-          const vectorLayer = new VectorLayer({
-            source: vectorSource,
-          });
+        const vectorLayer = new VectorLayer({
+          source: vectorSource,
+        });
 
-          this.openLayerService.addLayer(vectorLayer) // this where the feature is adding to the selected layer
-        }
-      );
-    
+        this.openLayerService.addLayer(vectorLayer); // this where the feature is adding to the selected layer
+      }
+    );
   }
-
 
   onProjectionChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
     const projectionId = selectElement.value;
     this.openLayerService.viewProjectionChange(projectionId);
   }
-
 }
