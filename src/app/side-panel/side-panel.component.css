@@ -1,0 +1,40 @@
+.side-panel-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+/* *** TABS *** */
+.side-panel-tabs {
+  width: 30px;
+}
+
+.side-panel-tab {
+  background-color: var(--color-primary);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  width: 30px;
+  height: 120px;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid var(--color-secondary-l2);
+  transition: background-color 0.3s ease;
+  color: var(--color-secondary-l1);
+}
+
+.side-panel-tab:hover {
+  background-color: var(--color-primary-l1);
+  cursor: pointer;
+}
+
+.side-panel-tab.active {
+  background-color: var(--color-secondary-l1);
+  font-weight: bold;
+  color: var(--color-primary-d1);
+}
+
+/* *** CONTENT *** */
+.side-panel-tab-content {
+  width: calc(100% - 30px);
+  border: 2px solid var(--color-secondary-l2);
+}

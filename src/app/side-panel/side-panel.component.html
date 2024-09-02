@@ -1,0 +1,44 @@
+<div class="side-panel-content">
+    <div class="side-panel-tab-content">
+        <!-- Render the appropriate component based on the selected tab -->
+        <ng-container *ngIf="activeTab === 1">
+            <app-tab-1></app-tab-1>
+        </ng-container>
+        <ng-container *ngIf="activeTab === 2">
+            <app-tab-2></app-tab-2>
+        </ng-container>
+        <ng-container *ngIf="activeTab === 3">
+            <app-tab-3></app-tab-3>
+        </ng-container>
+        <ng-container *ngIf="activeTab === 4">
+            <app-tab-4></app-tab-4>
+        </ng-container>
+    </div>
+
+    <div class="side-panel-tabs">
+        <div 
+            class="side-panel-tab" 
+            [class.active]="activeTab === 1" 
+            (click)="selectTab(1)">
+            Home
+        </div>
+        <div 
+            class="side-panel-tab" 
+            [class.active]="activeTab === 2" 
+            (click)="selectTab(2)">
+            Land
+        </div>
+        <div 
+            class="side-panel-tab" 
+            [class.active]="activeTab === 3" 
+            (click)="selectTab(3)">
+            Buildings
+        </div>
+        <div 
+            class="side-panel-tab" 
+            [class.active]="activeTab === 4" 
+            (click)="selectTab(4)">
+            Legal Spaces
+    </div>
+    </div>
+</div>

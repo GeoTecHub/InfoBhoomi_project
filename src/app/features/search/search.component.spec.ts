@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManMadeFeatureComponent } from './man-made-feature.component';
+import { SearchComponent } from './search.component';
 
-describe('ManMadeFeatureComponent', () => {
-  let component: ManMadeFeatureComponent;
-  let fixture: ComponentFixture<ManMadeFeatureComponent>;
+describe('SearchComponent', () => {
+  let component: SearchComponent;
+  let fixture: ComponentFixture<SearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ManMadeFeatureComponent]
+      imports: [SearchComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ManMadeFeatureComponent);
+    fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,21 @@
+.side-panel-space-1 {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.side-panel-button {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.side-panel-button:hover {
+  background-color: var(--color-secondary-l2);
+}
+
+.button-label {
+  margin-left: 5px;
+}

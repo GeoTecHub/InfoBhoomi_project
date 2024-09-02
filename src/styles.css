@@ -3,8 +3,77 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  /* Primary Colors */
+  --color-primary-l1: #9dc2e3;
+  /* --color-primary-l2: #73bdf8; */
+  /* --color-primary-l3: #5dade2; */
+  --color-primary: #779ab8; /* Main Primary Color */
+  --color-primary-d1: #31485c;
+  /* --color-primary-d2: #206394; */
+  /* --color-primary-d3: #154877; */
+
+  /* Secondary Colors */
+  --color-secondary-l1: #ffffff;
+  --color-secondary-l2: #e7e7e7;
+  /* --color-secondary-l3: #58d68d; */
+  --color-secondary: #a4a6b1; /* Main Secondary Color */
+  --color-secondary-d1: #030303;
+  /* --color-secondary-d2: #218c4e; */
+  /* --color-secondary-d3: #17643a; */
+
+  /* Accent Colors */
+  --color-accent-light: #fad7a0;
+  --color-accent: #f39c12;
+  --color-accent-dark: #e67e22;
+
+  /* Neutral Colors (Greys) */
+  --color-neutral-l1: #f4f4f4;
+  --color-neutral-l2: #e0e0e0;
+  --color-neutral-l3: #bdc3c7;
+  --color-neutral: #95a5a6;
+  --color-neutral-d1: #7f8c8d;
+  --color-neutral-d2: #5a6b6b;
+  --color-neutral-d3: #2c3e50;
+
+  /* Status Colors */
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-error: #dc3545;
+  --color-info: #17a2b8;
+
+  /* Background Colors */
+  --color-background-l1: #ffffff;
+  --color-background-d1: #2c3e50;
+
+  /* Text Colors */
+  --color-text-primary: #2c3e50;
+  --color-text-secondary: #7f8c8d;
+  --color-text-inverse: #ffffff;
+
+  /* Border Colors */
+  --color-border-l1: #dcdcdc;
+  --color-border-d1: #7f8c8d;
+}
+
+.ex {
+  color: var(--color-accent);
+}
